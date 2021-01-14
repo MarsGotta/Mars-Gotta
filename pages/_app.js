@@ -1,12 +1,17 @@
 import "../styles/globals.css";
-/*import { applyPolyfills, defineCustomElements } from "web-inmars/loader";
+import MarsHeader from "../components/mars-header/MarsHeader.jsx";
+import MarsFooter from "../components/mars-footer/MarsFooter.jsx";
 
-applyPolyfills().then(() => {
-  defineCustomElements();
-});*/
-
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function MarsApp({ Component, pageProps }) {
+  return (
+    <div id="MarsApp">
+      <MarsHeader></MarsHeader>
+      <main>
+        <Component {...pageProps} />
+      </main>
+      <MarsFooter></MarsFooter>
+    </div>
+  );
 }
 
-export default MyApp;
+export default MarsApp;

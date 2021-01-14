@@ -1,0 +1,15 @@
+.header {
+  background-color: #1f1331;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  min-height: 65px;
+}
+
+.logo {
+  height: 60px;
+  margin-left: 10px;
+}
