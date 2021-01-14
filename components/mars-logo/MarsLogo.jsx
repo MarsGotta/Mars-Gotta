@@ -6,7 +6,7 @@ const MarsLogo = ({
   className
 }) => {
   return (
-    <a aria-label="Mars Gotta logo" href="/">
+    <a className={styles['link']} aria-label="Mars Gotta logo" href="/">
       <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="109.853" height="39.221" viewBox="0 0 109.853 39.221">
         <defs>
           <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
