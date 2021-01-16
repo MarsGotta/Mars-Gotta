@@ -10,7 +10,7 @@ const MarsFooter = ({
       target="_blank"
       rel="noopener noreferrer"
     >
-      Powered by Mars Gotta
+      Hecho con amor por Mars Gotta
     </a>
   </footer>);
 };

@@ -1,3 +1,6 @@
+import Layout from "./../layout/Layout";
+
 export default function OwnProjects() {
-  return <div>Under construction</div>;
+  const config = { title: "Mis proyectos" };
+  return <Layout config={config}>En construcción</Layout>;
 }

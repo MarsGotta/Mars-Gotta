@@ -1,3 +1,6 @@
+import Layout from "./../layout/Layout";
+
 export default function Website() {
-  return <div>Under construction</div>;
+  const config = { title: "Esta web" };
+  return <Layout config={config}>En construcción</Layout>;
 }

@@ -62,4 +62,9 @@
   position: absolute;
   top: 20px;
   right: 10px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  fill: #b34219;
 }

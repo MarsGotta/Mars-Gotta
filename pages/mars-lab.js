@@ -1,3 +1,6 @@
+import Layout from "./../layout/Layout";
+
 export default function MarsLab() {
-  return <div>Under construction</div>;
+  const config = { title: "Mi laboratorio" };
+  return <Layout config={config}>Under construction</Layout>;
 }
