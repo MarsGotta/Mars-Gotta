@@ -10,17 +10,31 @@ export default function CoursesTalk() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <h3 style={{ fontWeight: 400, color: "#e6362d", margin: "15px 0" }}>
-          ¡Lo siento! Esta página está en construcción
+        <h3 style={{ fontWeight: 400, color: "#e6362d", margin: "15px 0 0" }}>
+          PWA con React
         </h3>
-        <p style={{ fontSize: "18px", margin: "0", marginBottom: "10px" }}>
-          Pronto tendré novedades para ti :)
+        <p
+          style={{
+            fontSize: "20px",
+            margin: "0",
+            marginBottom: "10px",
+            color: "#e6362d",
+          }}
+        >
+          SalmorejoTech, Córdoba, España
         </p>
-        <img
-          src="in-construction.svg"
+        <iframe
           width="100%"
-          style={{ maxWidth: "300px", alignSelf: "center" }}
-        ></img>
+          src="https://www.youtube.com/embed/XpK315cO0g4"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <p style={{ fontSize: "18px", lineHeight: "1.5" }}>
+          En esta charla explico lo fácil que es crear una PWA. Se enfoca en la
+          librería React pero los mismos pasos se pueden implementar en otros
+          frameworks o en Javascript Vainilla
+        </p>
       </div>
     </Layout>
   );
