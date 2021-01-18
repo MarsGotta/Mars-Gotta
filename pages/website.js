@@ -13,12 +13,14 @@ export default function Website() {
       <p style={{ fontSize: "18px", margin: "15px 10px" }}>
         Esta web está desarrollada con amor y con las siguientes tecnologías.
       </p>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
         {svgList.map((name, key) => (
           <img
             key={key}
             src={`${name}.svg`}
-            width="60px"
+            width="20%"
             style={{ margin: "5%" }}
           ></img>
         ))}
