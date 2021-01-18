@@ -1,6 +1,15 @@
+import Head from "next/head";
 import Layout from "./../layout/Layout";
 
 export default function About() {
   const config = { title: "Sobre mi" };
-  return <Layout config={config}>En construcción</Layout>;
+  return (
+    <Layout config={config}>
+      <Head>
+        <title>{config.title} | Mars Gotta</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      En construcción
+    </Layout>
+  );
 }
