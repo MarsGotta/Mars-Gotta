@@ -10,7 +10,7 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <h3 style={{ fontWeight: 100, color: "#e6362d", margin: "15px 0" }}>
+        <h3 style={{ fontWeight: 400, color: "#e6362d", margin: "15px 0" }}>
           ¡Lo siento! Esta página está en construcción
         </h3>
         <p style={{ fontSize: "18px", margin: "0", marginBottom: "10px" }}>
