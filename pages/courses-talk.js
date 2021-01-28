@@ -15,7 +15,7 @@ export default function CoursesTalk() {
         </h3>
         <p
           style={{
-            fontSize: "20px",
+            fontSize: "18px",
             margin: "0",
             marginBottom: "10px",
             color: "#e6362d",
