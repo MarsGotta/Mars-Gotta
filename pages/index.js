@@ -24,8 +24,12 @@ export default function Home() {
           </p>
 
           <div>
-            <MarsButton className={styles.primary}>Más sobre mi</MarsButton>
-            <MarsButton secondary>Contacto</MarsButton>
+            <MarsButton className={styles.primary} href="/about">
+              Más sobre mi
+            </MarsButton>
+            <MarsButton secondary href="/contact">
+              Contacto
+            </MarsButton>
           </div>
         </main>
       </div>
