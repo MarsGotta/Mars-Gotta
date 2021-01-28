@@ -2,10 +2,10 @@
   background-color: #e6362d;
   border: none;
   color: #fff;
-  padding: 8px;
+  padding: 8px 15px;
   border-radius: 4px;
   font-size: 19px;
-  font-weight: 100;
+  font-weight: 300;
   font-family: inherit;
   cursor: pointer;
 }

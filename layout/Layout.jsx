@@ -17,7 +17,7 @@ const Layout = ({
 		<Fragment>
 			<MarsHeader />
 			{renderSubHeader(landing, config)}
-			<main style={!landing ? { padding: '0 15px', fontSize: '20px', color: '#1F1331', fontWeight: 400, minHeight: 'calc(100vh - 260px)' } : {}}>
+			<main style={!landing ? { padding: '0 15px', fontSize: '20px', color: '#1a0e1a', fontWeight: 300, minHeight: 'calc(100vh - 260px)' } : {}}>
 				{children}
 			</main>
 			<MarsFooter />

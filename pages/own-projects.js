@@ -10,9 +10,9 @@ export default function OwnProjects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <h3 style={{ fontWeight: 400, color: "#e6362d", margin: "15px 0" }}>
+        <h4 style={{ color: "#1a0e1a", margin: "15px 0" }}>
           ¡Lo siento! Esta página está en construcción
-        </h3>
+        </h4>
         <p style={{ fontSize: "18px", margin: "0", marginBottom: "10px" }}>
           Pronto tendré novedades para ti :)
         </p>
