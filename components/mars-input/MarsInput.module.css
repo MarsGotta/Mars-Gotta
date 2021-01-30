@@ -1,3 +1,21 @@
-.mars-button {
-  background-color: aqua;
+.input {
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #b5b6ba;
+  color: #b5b6ba;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+}
+
+.input:focus {
+  outline: 1px auto #b5b6ba;
+}
+
+.input::placeholder {
+  color: #a1a1a1;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
 }

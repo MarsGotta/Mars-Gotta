@@ -1,0 +1,23 @@
+.validate-span {
+  color: #e6362d;
+}
+
+.invalid-input {
+  color: #e6362d;
+  border: 1px solid #e6362d !important;
+}
+
+.invalid-input::placeholder {
+  color: #e6362d !important;
+}
+
+.validate-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: end;
+}
+
+.sended-span {
+  font-size: 1.1rem;
+}

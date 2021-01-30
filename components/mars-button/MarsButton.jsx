@@ -7,15 +7,16 @@ const MarsButton = ({
   children,
   className,
   secondary,
-  href
+  href,
+  onClick
 }) => {
-  const [isSecondary, setIsSecondary] = useState(secondary);
+  const [isSecondary] = useState(secondary);
   
   const router = useRouter()
 
-  const onClickHandler = () => {
+  const onClickHandler = (e) => {
     if(href) router.push(href);
-    return;
+    onClick(e);
   }
 
   return (
@@ -29,12 +30,14 @@ MarsButton.defaultProps = {
   secondary: false,
   className: '',
   href: '',
+  onClick: () => {},
 };
 
 MarsButton.propTypes = {
   secondary: PropTypes.bool,
   className: PropTypes.string,
   href: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default MarsButton;

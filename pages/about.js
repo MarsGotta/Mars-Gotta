@@ -11,9 +11,16 @@ export default function About() {
       </Head>
       <p style={{ lineHeight: "28px", fontSize: "18px" }}>
         ¡Hola! Soy Marcela Gotta, soy una ninja en Javascript, especializada en
-        Frontend. Llevo 14 años siendo muy amiga del código y desarrollo con
-        todo tipo de framework de Javascript como: ReactJs, LitElement, Stencil,
-        VueJs, Angular, Sencha y Vanilla JavaScript.
+        Frontend. Llevo 14 años siendo muy amiga del código.
+      </p>
+      <img
+        src="about-me.svg"
+        width="100%"
+        style={{ maxWidth: "300px", alignSelf: "center" }}
+      ></img>
+      <p style={{ lineHeight: "28px", fontSize: "18px" }}>
+        Desarrollo con todo tipo de framework de Javascript como: ReactJs,
+        LitElement, Stencil, VueJs, Angular, Sencha y Vanilla JavaScript.
       </p>
       <p style={{ lineHeight: "28px", fontSize: "18px" }}>
         Soy muy buena en el desarrollo CSS y HTML5, al igual que me desempeño
