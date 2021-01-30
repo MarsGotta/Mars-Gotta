@@ -8,7 +8,7 @@ const MarsSubHeader = ({
 }) => {
   return (
     <div className={styles['sub-header']}>
-      <MarsStars limit={20}/>
+      <MarsStars limit={10}/>
       <h1 className={styles['title']}>{title}</h1>
     </div>
     );

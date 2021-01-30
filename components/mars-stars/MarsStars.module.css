@@ -19,8 +19,8 @@
   position: absolute;
   top: 25%;
   left: 25%;
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   background: #bcbec0b0;
   opacity: 0.1;
   overflow: hidden;
@@ -40,28 +40,28 @@
 .star-bottom:before,
 .star-bottom:after {
   content: "";
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   background: #1f1331;
   border-radius: 25%;
   position: absolute;
 }
 /*CSS3 pseudo class for positioning curves*/
 .star-top:before {
-  top: -12px;
-  left: -12px;
+  top: -20px;
+  left: -20px;
 }
 .star-top:after {
-  bottom: -12px;
-  left: 12px;
+  bottom: -20px;
+  left: 20px;
 }
 .star-bottom:before {
-  top: 12px;
-  left: -12px;
+  top: 20px;
+  left: -20px;
 }
 .star-bottom:after {
-  top: 12px;
-  left: 12px;
+  top: 20px;
+  left: 20px;
 }
 /*css3 keyframes for glittering effect*/
 @keyframes glitter {

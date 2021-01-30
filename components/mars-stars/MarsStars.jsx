@@ -33,7 +33,7 @@ const MarsStars = ({
 };
 
 MarsStars.defaultProps = {
-  limit: 20,
+  limit: 10,
   className: ''
 };
 
