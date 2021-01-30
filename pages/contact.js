@@ -139,7 +139,7 @@ export default function Contact() {
         />
 
         <div className={styles["validate-box"]}>
-          <MarsButton>Enviar</MarsButton>
+          <MarsButton className={styles["button-send"]}>Enviar</MarsButton>
           {!isValid.all ? (
             <span className={styles["validate-span"]}>
               Rellena todos los campos.

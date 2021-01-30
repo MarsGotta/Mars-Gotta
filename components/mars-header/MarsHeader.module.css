@@ -4,8 +4,8 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  z-index: 1;
-  position: relative;
+  z-index: 2;
+  position: fixed;
   min-height: 65px;
 }
 
