@@ -1,0 +1,26 @@
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.social-icons svg {
+  margin: 10px;
+  fill: #1f1331;
+}
+
+.social-icons svg.primary:hover {
+  fill: #e6362d;
+}
+
+.social-icons svg.secondary:hover {
+  fill: #1f1331;
+}
+
+svg.primary {
+  fill: #1f1331;
+}
+
+svg.secondary {
+  fill: #e6362d;
+}

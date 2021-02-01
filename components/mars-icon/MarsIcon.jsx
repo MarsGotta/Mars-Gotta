@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router'
 import PropTypes from 'prop-types';
 import styles from './MarsIcon.module.css';
 import * as icons from './IconCollection.jsx';
@@ -9,17 +10,20 @@ const MarsIcon = ({
   isDisabled, 
   addTitle, 
   onClick: passedCb, 
+  href,
   className
 }) => {
+  const router = useRouter()
   const onClick = () => {
     if (isDisabled) return;
+    if(href) window.open(href, '_ blank')
 
     passedCb();
   };
   
   const titlesTr = (name) => name; // Remove this code line
 
-  const completeClassName = `${isDisabled ? 'disabled' : ''} ${className}`;
+  const completeClassName = `${isDisabled ? styles['disabled'] : ''} ${href ? styles['href'] : ''} ${className}`;
 
   const titleTrans = addTitle ? titlesTr(name) : '';
   
@@ -36,6 +40,7 @@ MarsIcon.defaultProps = {
   addTitle: false,
   name: '',
   size: '24',
+  href: '',
   onClick: () => {},
 };
 
@@ -45,6 +50,7 @@ MarsIcon.propTypes = {
   addTitle: PropTypes.bool,
   name: PropTypes.string,
   size: PropTypes.string,
+  href: PropTypes.string,
   onClick: PropTypes.func,
 };
 
