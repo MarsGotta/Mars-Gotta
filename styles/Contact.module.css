@@ -5,6 +5,7 @@
 .invalid-input {
   color: #e6362d;
   border: 1px solid #e6362d !important;
+  border-radius: 5px;
 }
 
 .invalid-input::placeholder {
@@ -13,9 +14,15 @@
 
 .validate-box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: end;
+}
+
+.validate-span,
+.sended-span {
+  margin-top: 20px;
 }
 
 .sended-span {
@@ -23,5 +30,11 @@
 }
 
 .button-send {
-  margin-right: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.input {
+  margin-bottom: 15px;
 }

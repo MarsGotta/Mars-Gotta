@@ -1,34 +1,38 @@
+import {Fragment, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import styles from './MarsStars.module.css'
 
 const MarsStars = ({
   limit,
-  className
 }) => {
   const stars = [];
+  const [ state, setState ] = useState([])
+  useEffect(() => {
+      //to get random number
+    const rand = () => Math.random();
 
-  //to get random number
-  const rand = () => Math.random();
+    for (var i=0; i <= limit; i++) {
+      const startStyle = {
+        top: `${rand()*100}%`,
+        left: `${rand()*100}%`,
+        WebkitAnimationDelay: `${rand()}s`,
+        MozAnimationDelay:`${rand()}s`,
+      }
+      stars.push(
+        <figure key={i} className={styles["star"]} style={startStyle}>
+          <figure className={styles["star-top"]}></figure>
+          <figure className={styles["star-bottom"]}></figure>
+      </figure>
+      )
+    };
 
-  for (var i=0; i <= limit; i++) {
-    const startStyle = {
-      top: `${rand()*100}%`,
-      left: `${rand()*100}%`,
-      WebkitAnimationDelay: `${rand()}s`,
-      MozAnimationDelay:`${rand()}s`,
-    }
-    stars.push(
-      <figure key={i} className={styles["star"]} style={startStyle}>
-        <figure className={styles["star-top"]}></figure>
-        <figure className={styles["star-bottom"]}></figure>
-    </figure>
-    )
-  };
+    setState(stars)
+  }, []);
 
   return (
-    <div className={className}>
-      {stars}
-    </div>
+    <Fragment>
+      {state}
+    </Fragment>
     );
 };
 

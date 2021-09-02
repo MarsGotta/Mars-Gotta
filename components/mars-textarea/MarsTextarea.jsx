@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import styles from './MarsTextarea.module.css'
 
@@ -13,16 +13,20 @@ const MarsTextarea = ({
   name,
   className
 }) => {
+  useEffect(() => {
+    import("@webinmars/mars-textarea/dist/mars-textarea");
+  }, []);
+
   const handleChange = (e) => {
     if (disabled) return;
 
-    onChange(e);
+    onChange && onChange(e);
   };
 
   const onKeyDown = (e) => {
     const theCode = e.keyCode || e.which || e.charCode;
 
-    if (theCode === 13) {
+    if (theCode === 13 && onEnter) {
       onEnter();
     }
 
@@ -30,17 +34,16 @@ const MarsTextarea = ({
   };
   
   return (
-    <textarea 
+    <mars-textarea 
       name={name}
       disabled={disabled} 
       placeholder={placeholder} 
-      value={children || value} 
+      value={value} 
       disabled={disabled}
-      onChange={handleChange}
-      placeholder={placeholder}
+      onInput={handleChange}
+      label={placeholder}
       onKeyDown={onKeyDown}
-      className={`${className} ${styles['textarea']}`}>
-    </textarea>
+      class={`${className}`}/>
   );
 };
 

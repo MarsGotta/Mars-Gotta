@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types';
 import styles from './MarsButton.module.css'
 
 const MarsButton = ({
   children,
-  className,
-  secondary,
   href,
-  onClick
+  onClick,
+  variant,
+  className
 }) => {
-  const [isSecondary] = useState(secondary);
-  
-  const router = useRouter()
+  const router = useRouter();
+
+  useEffect(() => {
+    import("@webinmars/mars-button/dist/mars-button.js");
+  }, []);
 
   const onClickHandler = (e) => {
     if(href) router.push(href);
@@ -20,22 +22,20 @@ const MarsButton = ({
   }
 
   return (
-    <button className={`${className} ${styles['button']} ${isSecondary ? styles['secondary'] : ''}`} onClick={onClickHandler}>
-      {children}
-    </button>
+      <mars-button type="submit" variant={variant} class={`${className} ${styles['button']}`} onClick={onClickHandler}>
+        {children}
+      </mars-button>
   );
 };
 
 MarsButton.defaultProps = {
-  secondary: false,
-  className: '',
+  variant: '',
   href: '',
   onClick: () => {},
 };
 
 MarsButton.propTypes = {
-  secondary: PropTypes.bool,
-  className: PropTypes.string,
+  variant: PropTypes.string,
   href: PropTypes.string,
   onClick: PropTypes.func,
 };

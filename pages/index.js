@@ -23,11 +23,11 @@ export default function Home() {
             tengo un zoológico en mi casa y 18 tatuajes.
           </p>
 
-          <div>
+          <div className={styles["button-box"]}>
             <MarsButton className={styles.primary} href="/about">
               Más sobre mi
             </MarsButton>
-            <MarsButton secondary href="/contact">
+            <MarsButton variant="secondary" href="/contact">
               Contacto
             </MarsButton>
           </div>

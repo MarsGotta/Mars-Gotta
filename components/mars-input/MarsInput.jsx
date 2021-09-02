@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './MarsInput.module.css'
 
@@ -13,10 +13,14 @@ const MarsInput = ({
   name,
   className
 }) => {
+  useEffect(() => {
+    import("@webinmars/mars-textfield/dist/mars-text-field");
+  }, []);
+
   const handleChange = (e) => {
     if (disabled) return;
 
-    onChange(e);
+    onChange && onChange(e);
   };
 
   const onKeyDown = (e) => {
@@ -30,15 +34,15 @@ const MarsInput = ({
   };
   
   return (
-    <input
+    <mars-text-field
         name={name}
-        className={`${className} ${styles['input']}`}
+        class={`${className} ${styles['input']}`}
         type={type}
         id={id}
         disabled={disabled}
-        onChange={handleChange}
+        onInput={handleChange}
         value={value}
-        placeholder={placeholder}
+        label={placeholder}
         onKeyDown={onKeyDown}
       />
   );

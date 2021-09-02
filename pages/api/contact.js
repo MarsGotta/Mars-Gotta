@@ -3,7 +3,6 @@ import { mailer } from "../../core/mailer";
 export default async (req, res) => {
   if (req.method === "POST") {
     const { email = "", name = "", message = "", subject = "" } = req.body;
-    debugger;
     await mailer({ email, name, text: message, subject });
     return res.status(200).end();
   }

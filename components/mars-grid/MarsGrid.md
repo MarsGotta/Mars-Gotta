@@ -1,4 +1,4 @@
-# Button
+# Mars Grid
 
 ## Props
 
@@ -15,7 +15,7 @@
 ## Usage
 
 ```jsx
-<Button
+<Mars Grid
   className="openWebPhone"
   icon="mute"
   isCircle={true}

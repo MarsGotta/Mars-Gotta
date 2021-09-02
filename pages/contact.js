@@ -25,9 +25,9 @@ export default function Contact() {
   });
   const [isSended, setIsSended] = useState(false);
 
-  const validateInput = (name) =>
-    !isValid[name] ? styles["invalid-input"] : "";
-
+  const validateInput = (name) => {
+    return !isValid[name] && styles["invalid-input"];
+  };
   const handleChange = (event) => {
     const { name, value } = event.target;
     setState({
@@ -67,20 +67,16 @@ export default function Contact() {
   };
 
   const handlePress = (e) => {
-    e.preventDefault();
+    e?.preventDefault();
     const { name, email, subject, message } = state;
-    let newObj = {};
+    let inputs = {};
     for (let input in state) {
-      if (!state[input]) {
-        newObj[input] = false;
-      } else {
-        newObj[input] = true;
-      }
+      inputs[input] = Boolean(state[input]);
     }
     if (name && email && subject && message) {
       setIsValid({
         ...isValid,
-        ...newObj,
+        ...inputs,
         all: true,
       });
       sendRequest({ name, email, subject, message });
@@ -88,7 +84,7 @@ export default function Contact() {
       setIsSended(false);
       setIsValid({
         ...isValid,
-        ...newObj,
+        ...inputs,
         all: false,
       });
     }
@@ -110,7 +106,7 @@ export default function Contact() {
           name="name"
           onChange={handleChange}
           onEnter={handlePress}
-          className={validateInput("name")}
+          className={`${validateInput("name")} ${styles["input"]}`}
           value={state.name}
         />
         <MarsInput
@@ -118,7 +114,7 @@ export default function Contact() {
           name="email"
           onChange={handleChange}
           onEnter={handlePress}
-          className={validateInput("email")}
+          className={`${validateInput("email")} ${styles["input"]}`}
           value={state.email}
         />
         <MarsInput
@@ -126,20 +122,21 @@ export default function Contact() {
           name="subject"
           onChange={handleChange}
           onEnter={handlePress}
-          className={validateInput("subject")}
+          className={`${validateInput("subject")} ${styles["input"]}`}
           value={state.subject}
         />
         <MarsTextarea
           placeholder="Mensaje"
           name="message"
           onChange={handleChange}
-          onEnter={handlePress}
-          className={validateInput("message")}
+          className={`${validateInput("message")} ${styles["input"]}`}
           value={state.message}
         />
 
         <div className={styles["validate-box"]}>
-          <MarsButton className={styles["button-send"]}>Enviar</MarsButton>
+          <MarsButton onClick={handlePress} className={styles["button-send"]}>
+            Enviar
+          </MarsButton>
           {!isValid.all ? (
             <span className={styles["validate-span"]}>
               Rellena todos los campos.

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types';
 import styles from './MarsIcon.module.css';
@@ -14,6 +14,11 @@ const MarsIcon = ({
   className
 }) => {
   const router = useRouter()
+
+  useEffect(() => {
+    import("@webinmars/icon/dist/mars-icon");
+  }, []);
+
   const onClick = () => {
     if (isDisabled) return;
     if(href) window.open(href, '_ blank')
