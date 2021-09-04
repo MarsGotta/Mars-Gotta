@@ -13,3 +13,20 @@
   height: 60px;
   margin-left: 10px;
 }
+
+.header-content {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.icon {
+  fill: #e7531e;
+  float: right;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.icon:hover {
+  fill: #b34219;
+}

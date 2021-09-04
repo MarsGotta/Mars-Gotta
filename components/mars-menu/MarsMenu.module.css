@@ -68,18 +68,6 @@
   z-index: 1;
 }
 
-.icon {
-  fill: #e7531e;
-  position: absolute;
-  top: 20px;
-  right: 10px;
-  cursor: pointer;
-}
-
-.icon:hover {
-  fill: #b34219;
-}
-
 .collapsed .stars {
   display: none;
 }

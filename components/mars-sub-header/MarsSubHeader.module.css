@@ -1,7 +1,7 @@
 .sub-header {
   background: #1f1331;
   display: flex;
-  height: 185px;
+  height: 200px;
   align-items: flex-end;
   position: relative;
   overflow: hidden;
@@ -14,5 +14,10 @@
   color: #bcbec0;
   font-weight: 100;
   font-size: 2.1rem;
+}
+.title-box {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
   z-index: 1;
 }

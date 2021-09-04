@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "./../layout/Layout";
+import MarsGrid from "./../components/mars-grid/MarsGrid";
 
 export default function About() {
   const config = { title: "Sobre mi" };
@@ -9,15 +10,15 @@ export default function About() {
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <img
+        src="about-me.svg"
+        width="100%"
+        style={{ maxWidth: "350px", float: "left" }}
+      ></img>
       <p style={{ lineHeight: "28px", fontSize: "18px" }}>
         ¡Hola! Soy Marcela Gotta, soy una ninja en Javascript, especializada en
         Frontend. Llevo 14 años siendo muy amiga del código.
       </p>
-      <img
-        src="about-me.svg"
-        width="100%"
-        style={{ maxWidth: "300px", alignSelf: "center" }}
-      ></img>
       <p style={{ lineHeight: "28px", fontSize: "18px" }}>
         Desarrollo con todo tipo de framework de Javascript como: ReactJs,
         LitElement, Stencil, VueJs, Angular, Sencha y Vanilla JavaScript.

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import styles from './MarsHeader.module.css'
 import MarsMenu from '../mars-menu/MarsMenu'
 import MarsLogo from '../mars-logo/MarsLogo'
+import MarsIcon from '../mars-icon/MarsIcon.jsx'
 
 const MarsHeader = ({
 }) => {
@@ -36,10 +37,18 @@ const MarsHeader = ({
       title: 'Contacto'
     }
   ]
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleToggle = () => {
+    setIsExpanded(!isExpanded);
+  }
   return (
     <header className={styles['header']}>
-      <MarsLogo className={styles['logo']}></MarsLogo>
-      <MarsMenu items={menuItems}></MarsMenu>
+      <div className={styles['header-content']}>
+        <MarsLogo className={styles['logo']}></MarsLogo>
+        <MarsIcon className={styles['icon']} name="bars" onClick={handleToggle}></MarsIcon>
+        <MarsMenu items={menuItems} isExpanded={isExpanded}></MarsMenu>
+      </div>
     </header>
   );
 };

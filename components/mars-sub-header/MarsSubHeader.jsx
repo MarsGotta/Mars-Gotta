@@ -9,7 +9,9 @@ const MarsSubHeader = ({
   return (
     <div className={styles['sub-header']}>
       <MarsStars limit={10}/>
-      <h1 className={styles['title']}>{title}</h1>
+      <section  className={styles['title-box']}>
+        <h1 className={styles['title']}>{title}</h1>
+      </section>
     </div>
     );
 };
