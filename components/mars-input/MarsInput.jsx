@@ -14,7 +14,7 @@ const MarsInput = ({
   className
 }) => {
   useEffect(() => {
-    import("@webinmars/mars-textfield/dist/mars-text-field");
+    import("@web-inmars/mars-textfield/dist/mars-textfield.js");
   }, []);
 
   const handleChange = (e) => {
@@ -34,7 +34,7 @@ const MarsInput = ({
   };
   
   return (
-    <mars-text-field
+    <mars-textfield
         name={name}
         class={`${className} ${styles['input']}`}
         type={type}

@@ -16,7 +16,7 @@ const MarsIcon = ({
   const router = useRouter()
 
   useEffect(() => {
-    import("@webinmars/icon/dist/mars-icon");
+    import("@web-inmars/mars-icon/dist/mars-icon");
   }, []);
 
   const onClick = () => {

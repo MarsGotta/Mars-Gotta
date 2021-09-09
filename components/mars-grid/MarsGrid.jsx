@@ -19,7 +19,7 @@ const MarsGrid = ({
   containerSize
 }) => {
   useEffect(() => {
-    import("@webinmars/grid/dist/mars-grid");
+    import("@web-inmars/mars-grid/dist/mars-grid");
   }, []);
 
   return (

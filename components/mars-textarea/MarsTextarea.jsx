@@ -14,7 +14,7 @@ const MarsTextarea = ({
   className
 }) => {
   useEffect(() => {
-    import("@webinmars/mars-textarea/dist/mars-textarea");
+    import("@web-inmars/mars-textarea/dist/mars-textarea");
   }, []);
 
   const handleChange = (e) => {

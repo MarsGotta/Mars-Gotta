@@ -7,11 +7,11 @@
     "start": "next start"
   },
   "dependencies": {
-    "@webinmars/mars-button": "^0.1.2",
-    "@webinmars/grid": "^0.0.2",
-    "@webinmars/icon": "^0.1.1",
-    "@webinmars/mars-textarea": "^0.0.2",
-    "@webinmars/mars-textfield": "^0.0.3",
+    "@web-inmars/mars-button": "^0.1.0",
+    "@web-inmars/mars-grid": "^0.1.0",
+    "@web-inmars/mars-icon": "^0.1.0",
+    "@web-inmars/mars-textarea": "^0.1.0",
+    "@web-inmars/mars-textfield": "^0.1.0",
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
