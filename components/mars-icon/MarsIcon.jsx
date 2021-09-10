@@ -15,7 +15,7 @@ const MarsIcon = ({
 }) => {
   useEffect(() => {    setTimeout(() => {
       import("@web-inmars/mars-icon/dist/mars-icon");
-    }, 500)
+    }, 200)
   }, []);
 
   const onClick = () => {
