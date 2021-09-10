@@ -146,7 +146,15 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.9.tgz#97edc9037ea0c38585320b28964dde3b39e4660d"
   integrity sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==
 
-"@web-inmars/mars-awesome-solid@^0.1.1":
+"@web-inmars/mars-awesome-brands@^0.1.0":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@web-inmars/mars-awesome-brands/-/mars-awesome-brands-0.1.1.tgz#d57329d540ca9049d84deb9af367734ba81ac2c2"
+  integrity sha512-78v2/joEFRAyKJqyEUtYaMEzh4KDcfGyo9ZNQvDmAOZ3/1MR5Qra778RQ/LOmvkgCXrZykPEQZk3BRSCM3vqKw==
+  dependencies:
+    command-line-args "^5.1.1"
+    command-line-usage "^6.1.1"
+
+"@web-inmars/mars-awesome-solid@^0.1.0", "@web-inmars/mars-awesome-solid@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@web-inmars/mars-awesome-solid/-/mars-awesome-solid-0.1.1.tgz#20b5faca4cba0a51fbb019b63299017315fbe3da"
   integrity sha512-xqYgJ8Y7XnH0c4eyyhR/wPVjyUAtOXL5ehpDiLoI4xLrREu3nycThSArqjG91nTeYr8f7j7sN0P/wRDQ5wstAw==

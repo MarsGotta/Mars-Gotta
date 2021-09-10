@@ -11,22 +11,26 @@ const MarsSocial = ({
     {
       name: 'github',
       link: 'https://github.com/MarsGotta',
-      className: 'primary'
+      variant: 'primary',
+      type: 'brands'
     }, 
     {
       name: 'linkedin',
       link: 'https://www.linkedin.com/in/marcelagotta/',
-      className: 'primary'
+      variant: 'primary',
+      type: 'brands'
     }, 
     {
       name: 'twitter',
       link: 'https://twitter.com/marcelagotta',
-      className: 'secondary'
+      variant: 'secondary',
+      type: 'brands'
     }, 
     {
       name: 'telegram',
       link: 'https://t.me/marsgotta',
-      className: 'secondary'
+      variant: 'secondary',
+      type: 'brands'
     }
   ];
 
@@ -37,8 +41,18 @@ const MarsSocial = ({
   return (
     <figure className={`${className} ${styles['social-icons']}`}>
       {socialIcons.map((item, index) => {
-        const { name, link, className } = item;
-        return (<MarsIcon key={index} name={name} href={link} className={styles[className]} onClick={onClickHandler} size={35} />)
+        const { name, link, variant, type } = item;
+        return (
+        <MarsIcon 
+          key={index} 
+          name={name} 
+          href={link} 
+          variant={variant} 
+          className={`${styles['social-icon']} ${styles[variant]}`} 
+          onClick={onClickHandler} 
+          size={35} 
+          type={type} 
+        />)
       })}
     </figure>
   );

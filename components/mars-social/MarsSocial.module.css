@@ -4,23 +4,17 @@
   margin: 0;
 }
 
-.social-icons svg {
+.social-icon {
   margin: 10px;
-  fill: #1f1331;
+  cursor: pointer;
 }
 
-.social-icons svg.primary:hover {
-  fill: #e6362d;
+.social-icon.primary::part(svg),
+.social-icon.secondary::part(svg):hover {
+  fill: var(--color-primary-600);
 }
 
-.social-icons svg.secondary:hover {
-  fill: #1f1331;
-}
-
-svg.primary {
-  fill: #1f1331;
-}
-
-svg.secondary {
-  fill: #e6362d;
+.social-icon.secondary::part(svg),
+.social-icon.primary::part(svg):hover {
+  fill: var(--color-secondary-500);
 }

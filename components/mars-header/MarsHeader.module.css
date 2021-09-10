@@ -22,12 +22,15 @@
 }
 
 .icon {
-  fill: #e7531e;
   float: right;
   margin: 20px;
   cursor: pointer;
 }
 
-.icon:hover {
-  fill: #b34219;
+.icon::part(svg) {
+  fill: var(--color-tertiary-500);
+}
+
+.icon::part(svg):hover {
+  fill: var(--color-tertiary-600);
 }

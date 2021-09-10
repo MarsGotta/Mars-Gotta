@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/router'
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './MarsIcon.module.css';
-import * as icons from './IconCollection.jsx';
 
 const MarsIcon = ({
   name,
@@ -11,32 +9,26 @@ const MarsIcon = ({
   addTitle, 
   onClick: passedCb, 
   href,
-  className
+  className,
+  type,
+  variant
 }) => {
-  const router = useRouter()
-
   useEffect(() => {
     import("@web-inmars/mars-icon/dist/mars-icon");
   }, []);
 
   const onClick = () => {
     if (isDisabled) return;
-    if(href) window.open(href, '_ blank')
+    if(href) window?.open(href, '_ blank')
 
     passedCb();
   };
-  
-  const titlesTr = (name) => name; // Remove this code line
 
   const completeClassName = `${isDisabled ? styles['disabled'] : ''} ${href ? styles['href'] : ''} ${className}`;
 
-  const titleTrans = addTitle ? titlesTr(name) : '';
-  
-  const icon = icons[name]
-    ? icons[name]({ onClick, className: completeClassName, title: titleTrans, size })
-    : null;
-
-  return icon;
+  return (
+    <mars-icon class={completeClassName} title name={name} type={type} width={size} height={size} variant={variant} onClick={() => onClick()} />
+  );
 };
 
 MarsIcon.defaultProps = {

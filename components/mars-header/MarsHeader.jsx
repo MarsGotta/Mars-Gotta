@@ -46,7 +46,7 @@ const MarsHeader = ({
     <header className={styles['header']}>
       <div className={styles['header-content']}>
         <MarsLogo className={styles['logo']}></MarsLogo>
-        <MarsIcon className={styles['icon']} name="bars" onClick={handleToggle}></MarsIcon>
+        <MarsIcon className={styles['icon']} name="bars" type="solid" onClick={handleToggle}></MarsIcon>
         <MarsMenu items={menuItems} isExpanded={isExpanded}></MarsMenu>
       </div>
     </header>
