@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './MarsMenu.module.css'
 import MarsStars from '../mars-stars/MarsStars'
+import MarsSocial from '../mars-social/MarsSocial'
 
 const MarsMenu = ({
   children,
@@ -11,14 +12,15 @@ const MarsMenu = ({
 
 
   return (
-    <nav className={`${styles['collapsed']} ${isExpanded ? styles['is-expanded'] : ''}`}>
-      <ul className={styles['list']}>
-        <MarsStars limit={15} className={styles['stars']}/>
-        {items.map(({href, title}, key) => (
-          <li className={styles['item']} key={key}><a href={href}>{title}</a></li>
-        ))}
-      </ul>
-    </nav>
+      <nav className={`${styles['collapsed']} ${isExpanded ? styles['is-expanded'] : ''}`}>
+        <ul className={styles['list']}>
+          <MarsStars limit={15} className={styles['stars']} />
+          {items.map(({ href, title }, key) => (
+            <li className={styles['item']} key={key}><a href={href}>{title}</a></li>
+          ))}
+        </ul>
+      <MarsSocial className={styles['social']} />
+      </nav>
   );
 };
 

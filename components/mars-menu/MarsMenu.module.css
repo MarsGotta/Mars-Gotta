@@ -2,27 +2,16 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   overflow: hidden;
   height: 0;
   margin: 0;
   justify-content: center;
-  -moz-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
   transition-duration: 1s;
-  -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 .is-expanded {
   overflow: hidden;
-  height: calc(100vh - 60px);
-  /* approximate max height */
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
+  height: calc(100vh - 50px);
   transition-duration: 0.5s;
   -moz-transition-timing-function: ease-in;
   -webkit-transition-timing-function: ease-in;
@@ -74,4 +63,24 @@
 
 .is-expanded .stars {
   display: block;
+}
+
+.collapsed .social {
+  display: none;
+}
+
+.is-expanded .social {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.social mars-icon::part(svg) {
+  fill: transparent !important;
+  stroke: var(--color-tertiary-500);
+  stroke-width: 15px;
+}
+
+.social mars-icon::part(svg):hover {
+  fill: var(--color-tertiary-500) !important;
+  stroke-width: 0;
 }
