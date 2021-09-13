@@ -42,7 +42,7 @@
   content: "";
   width: 40px;
   height: 40px;
-  background: #1f1331;
+  background: var(--color-bg-secondary);
   border-radius: 25%;
   position: absolute;
 }

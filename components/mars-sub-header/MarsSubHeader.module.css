@@ -1,5 +1,5 @@
 .sub-header {
-  background: #1f1331;
+  background: var(--color-bg-secondary);
   display: flex;
   height: 200px;
   align-items: flex-end;

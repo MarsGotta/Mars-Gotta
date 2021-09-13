@@ -1,5 +1,5 @@
 .header {
-  background-color: #1f1331;
+  background-color: var(--color-bg-secondary);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,16 +21,28 @@
   margin: 0 auto;
 }
 
-.icon {
-  float: right;
-  margin: 20px;
-  cursor: pointer;
-}
-
 .icon::part(svg) {
   fill: var(--color-tertiary-500);
 }
 
 .icon::part(svg):hover {
   fill: var(--color-tertiary-600);
+}
+
+.right-box {
+  float: right;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.switch {
+  display: inline-block;
+  --custom-switch-color-bg: var(--color-tertiary-500);
+  --custom-switch-color-bg-hover: var(--color-tertiary-600);
+  --custom-switch-color-bg-checked: var(--color-secondary-600);
+  --custom-switch-color-bg-checked-hover: var(--color-secondary-700);
+}
+
+.icon-switch::part(svg) {
+  fill: #f3b7b4;
 }

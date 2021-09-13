@@ -7,6 +7,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 300;
+  --color-text-primary: #1f1331;
+  --color-bg-secondary: #1f1331;
+  --color-divider-primary: #eaeaea;
 }
 
 a {
@@ -16,4 +19,15 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.layout-box {
+  background-color: var(--color-background, white);
+}
+
+.dark-mode {
+  --color-background: #1f1331;
+  --color-bg-secondary: #1f1331;
+  --color-text-primary: #ccd1d7;
+  --color-divider-primary: #0c0712;
 }

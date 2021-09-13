@@ -30,7 +30,13 @@ export default function CoursesTalk() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
-        <p style={{ fontSize: "18px", lineHeight: "1.5" }}>
+        <p
+          style={{
+            fontSize: "18px",
+            lineHeight: "1.5",
+            color: "var(--color-text-primary)",
+          }}
+        >
           En esta charla explico lo fácil que es crear una PWA. Se enfoca en la
           librería React pero los mismos pasos se pueden implementar en otros
           frameworks o en Javascript Vainilla

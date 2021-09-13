@@ -53,7 +53,7 @@
 }
 
 .is-expanded .item a {
-  background: #1f1331;
+  background: var(--color-bg-secondary);
   z-index: 1;
 }
 

@@ -10,7 +10,13 @@ export default function Website() {
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <p style={{ fontSize: "19px", margin: "15px 0px" }}>
+      <p
+        style={{
+          fontSize: "19px",
+          margin: "15px 0px",
+          color: "var(--color-text-primary)",
+        }}
+      >
         Esta web está desarrollada con amor y con las siguientes tecnologías.
       </p>
       <div

@@ -11,7 +11,8 @@ const MarsIcon = ({
   href,
   className,
   type,
-  variant
+  variant,
+  slot
 }) => {
   useEffect(() => {    setTimeout(() => {
       import("@web-inmars/mars-icon/dist/mars-icon");
@@ -28,7 +29,7 @@ const MarsIcon = ({
   const completeClassName = `${isDisabled ? styles['disabled'] : ''} ${href ? styles['href'] : ''} ${className}`;
 
   return (
-    <mars-icon class={completeClassName} title name={name} type={type} width={size} height={size} variant={variant} onClick={() => onClick()} />
+    <mars-icon class={completeClassName} title name={name} type={type} width={size} height={size} variant={variant} onClick={() => onClick()} slot={slot} />
   );
 };
 
