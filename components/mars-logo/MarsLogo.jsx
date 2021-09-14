@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 import PropTypes from 'prop-types';
 import styles from './MarsLogo.module.css'
 
@@ -6,7 +7,7 @@ const MarsLogo = ({
   className
 }) => {
   return (
-    <a className={styles['link']} aria-label="Mars Gotta logo" href="/">
+    <Link className={styles['link']} ariaLabel="Mars Gotta logo" href="/">
       <svg className={className} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="109.853" height="39.221" viewBox="0 0 109.853 39.221">
         <defs>
           <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
@@ -30,7 +31,7 @@ const MarsLogo = ({
           <path id="Trazado_384" data-name="Trazado 384" d="M526.125,507.109h-.285a6.219,6.219,0,1,1,6.219,6.219,6.219,6.219,0,0,1-6.219-6.219h.564a5.656,5.656,0,1,0,5.655-5.656,5.656,5.656,0,0,0-5.655,5.656Z" transform="translate(-391.718 -349.466)" fill="url(#linear-gradient-3)"/>
         </g>
       </svg>
-    </a>
+    </Link>
     );
 };
 

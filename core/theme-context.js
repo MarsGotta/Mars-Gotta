@@ -6,7 +6,7 @@ export const themes = {
 };
 
 //Context
-export const ThemeContext = createContext(null);
+export const ThemeContext = createContext(themes.light);
 
 function changeBodyClass(variableState) {
   if (variableState === themes.dark) {

@@ -42,7 +42,6 @@ export default function CoursesTalk() {
           style={{
             fontSize: "18px",
             lineHeight: "1.5",
-            color: "var(--color-text-primary)",
           }}
         >
           En esta charla explico lo fácil que es crear una PWA. Se enfoca en la

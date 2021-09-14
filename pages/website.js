@@ -34,8 +34,15 @@ export default function Website() {
           <img
             key={key}
             src={`${name}.svg`}
-            width="20%"
-            style={{ margin: "5%" }}
+            width="22%"
+            style={{
+              margin: "5%",
+              background: "#f9fafbcc",
+              padding: "10px 15px",
+              border: "2px solid #e7531e",
+              borderRadius: "20px",
+              maxWidth: "150px",
+            }}
           ></img>
         ))}
       </div>

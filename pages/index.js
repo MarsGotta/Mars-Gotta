@@ -1,11 +1,16 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
 
-import { useThemeContext, setStorageTheme } from "../core/theme-context";
+import {
+  useThemeContext,
+  setStorageTheme,
+  themes,
+} from "../core/theme-context";
 
 import styles from "../styles/Home.module.css";
 import Layout from "../layout/Layout.jsx";
 import MarsButton from "../components/mars-button/MarsButton.jsx";
+import MarsStars from "../components/mars-stars/MarsStars";
 
 export default function Home() {
   const { variableState, setVariableState } = useThemeContext();
@@ -43,6 +48,9 @@ export default function Home() {
             </MarsButton>
           </div>
         </main>
+        {variableState === themes.dark && (
+          <MarsStars limit={8} className={styles["stars"]} />
+        )}
       </div>
     </Layout>
   );

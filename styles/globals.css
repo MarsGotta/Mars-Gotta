@@ -7,13 +7,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 300;
-  background-color: var(--color-background, white);
+  background-color: var(--color-background, #1f1331);
   --color-text-primary: #1f1331;
   --color-bg-secondary: #1f1331;
   --color-divider-primary: #eaeaea;
 }
 
 body.light-theme {
+  background-color: white;
+  --color-background: white;
   --color-text-primary: #1f1331;
   --color-bg-secondary: #1f1331;
   --color-divider-primary: #eaeaea;

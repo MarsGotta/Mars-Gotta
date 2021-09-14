@@ -34,7 +34,10 @@ export default function MarsLab() {
         <img
           src="in-construction.svg"
           width="100%"
-          style={{ maxWidth: "300px", alignSelf: "center" }}
+          style={{
+            maxWidth: "300px",
+            alignSelf: "center",
+          }}
         ></img>
       </div>
     </Layout>

@@ -13,10 +13,11 @@ const MarsStars = ({
 
     for (var i=0; i <= limit; i++) {
       const startStyle = {
-        top: `${rand()*100}%`,
-        left: `${rand()*100}%`,
+        top: `${rand()*90}%`,
+        left: `${rand()*90}%`,
         WebkitAnimationDelay: `${rand()}s`,
         MozAnimationDelay:`${rand()}s`,
+        background: `#F9FAFB`,
       }
       stars.push(
         <figure key={i} className={styles["star"]} style={startStyle}>
@@ -30,9 +31,9 @@ const MarsStars = ({
   }, []);
 
   return (
-    <Fragment>
+    <>
       {state}
-    </Fragment>
+    </>
     );
 };
 
