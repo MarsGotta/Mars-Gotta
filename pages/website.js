@@ -1,11 +1,20 @@
 import Head from "next/head";
+import { useThemeContext, setStorageTheme } from "../core/theme-context";
+
 import Layout from "./../layout/Layout";
 
 export default function Website() {
   const config = { title: "Esta web" };
   const svgList = ["html5", "css3", "javascript", "react", "nextjs", "nodejs"];
+  const { variableState, setVariableState } = useThemeContext();
+
+  const handleSwitch = (theme) => {
+    setVariableState(theme);
+    setStorageTheme(theme);
+  };
+
   return (
-    <Layout config={config}>
+    <Layout config={config} theme={variableState} onSwitch={handleSwitch}>
       <Head>
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />

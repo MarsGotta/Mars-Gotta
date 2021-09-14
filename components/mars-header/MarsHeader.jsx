@@ -7,7 +7,7 @@ import MarsIcon from '../mars-icon/MarsIcon.jsx'
 
 const MarsHeader = ({
   changeSwitch,
-  isDarkMode
+  theme
 }) => {
   const menuItems = [
     {
@@ -58,10 +58,11 @@ const MarsHeader = ({
   }, []);
 
   useEffect(() => {
+    const isDark = theme === 'dark-theme';
     MarsSwitchRef.current.addEventListener('on-change', handleSwitch);
-    setSwitchChecked(isDarkMode);
-    MarsSwitchRef.current.checked = isDarkMode;
-  }, [MarsSwitchRef, isDarkMode]);
+    setSwitchChecked(isDark);
+    MarsSwitchRef.current.checked = switchChecked;
+  }, [MarsSwitchRef, switchChecked, theme]);
 
   return (
     <header className={styles['header']}>

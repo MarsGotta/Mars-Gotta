@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import {themes} from '../core/theme-context';
 import MarsHeader from '../components/mars-header/MarsHeader';
 import MarsFooter from '../components/mars-footer/MarsFooter';
 import MarsSubHeader from '../components/mars-sub-header/MarsSubHeader';
@@ -8,24 +9,20 @@ const renderSubHeader = (landing, { title }) => {
 	return <MarsSubHeader title={title} />
 }
 const Layout = ({
-  children,
+  	children,
 	landing,
-	config
+	config,
+	theme,
+	onSwitch
 }) => {
-	const [ isDarkMode, setIsDarkMode ] = React.useState(false);
-
-	useEffect(() => {
-		setIsDarkMode(JSON.parse(localStorage.getItem('isDarkMode')));
-	}, [])
-
-	const changeTheme = (theme) => {
-		setIsDarkMode(theme);
-		localStorage.setItem('isDarkMode', theme);
+	const changeTheme = (checked) => {
+		const theme = checked ? themes.dark : themes.light;
+		onSwitch(theme);
 	}
 	
   	return (
-		<div className={`layout-box ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
-			<MarsHeader changeSwitch={e => changeTheme(e)} isDarkMode={isDarkMode} />
+		<>
+			<MarsHeader changeSwitch={e => changeTheme(e)} theme={theme} />
 			{renderSubHeader(landing, config)}
 			<section style={{maxWidth: '1140px', margin: 'auto'}}>
 				<main style={!landing ? { padding: '0 15px', fontSize: '20px', color: '#1a0e1a', fontWeight: 300, minHeight: 'calc(100vh - 308px)' } : {}}>
@@ -33,18 +30,20 @@ const Layout = ({
 				</main>	
 			</section>
 			<MarsFooter />
-		</div>
+		</>
   );
 };
 
 Layout.defaultProps = {
 	landing: false,
-	config: {}
+	config: {},
+	onSwitch: () => {}
 };
 
 Layout.propTypes = {
   landing: PropTypes.bool,
   config: PropTypes.object,
+  onSwitch: PropTypes.func
 };
 
 export default Layout;

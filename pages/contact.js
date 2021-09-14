@@ -1,5 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
+import { useThemeContext, setStorageTheme } from "../core/theme-context";
+
 import styles from "../styles/Contact.module.css";
 import Layout from "./../layout/Layout";
 import MarsInput from "../components/mars-input/MarsInput";
@@ -8,6 +10,12 @@ import MarsButton from "../components/mars-button/MarsButton";
 
 export default function Contact() {
   const config = { title: "Contacto" };
+  const { variableState, setVariableState } = useThemeContext();
+
+  const handleSwitch = (theme) => {
+    setVariableState(theme);
+    setStorageTheme(theme);
+  };
 
   const [state, setState] = useState({
     name: "",
@@ -91,7 +99,7 @@ export default function Contact() {
   };
 
   return (
-    <Layout config={config}>
+    <Layout config={config} theme={variableState} onSwitch={handleSwitch}>
       <Head>
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />

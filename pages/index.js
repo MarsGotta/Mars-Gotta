@@ -1,11 +1,22 @@
 import Head from "next/head";
+import React, { useEffect } from "react";
+
+import { useThemeContext, setStorageTheme } from "../core/theme-context";
+
 import styles from "../styles/Home.module.css";
 import Layout from "../layout/Layout.jsx";
 import MarsButton from "../components/mars-button/MarsButton.jsx";
 
 export default function Home() {
+  const { variableState, setVariableState } = useThemeContext();
+
+  const handleSwitch = (theme) => {
+    setVariableState(theme);
+    setStorageTheme(theme);
+  };
+
   return (
-    <Layout landing>
+    <Layout landing theme={variableState} onSwitch={handleSwitch}>
       <div className={styles.container}>
         <Head>
           <title>Inicio | Mars Gotta</title>
