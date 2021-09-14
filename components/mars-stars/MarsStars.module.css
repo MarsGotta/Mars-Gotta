@@ -7,6 +7,7 @@
   border: 0;
   outline: none;
   box-sizing: border-box;
+  transition: all 0.2s ease;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;

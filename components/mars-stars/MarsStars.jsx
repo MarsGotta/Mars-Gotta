@@ -17,7 +17,7 @@ const MarsStars = ({
         left: `${rand()*90}%`,
         WebkitAnimationDelay: `${rand()}s`,
         MozAnimationDelay:`${rand()}s`,
-        background: `#F9FAFB`,
+        background: `#f9fafb5e`,
       }
       stars.push(
         <figure key={i} className={styles["star"]} style={startStyle}>

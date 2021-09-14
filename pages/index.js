@@ -49,7 +49,7 @@ export default function Home() {
           </div>
         </main>
         {variableState === themes.dark && (
-          <MarsStars limit={8} className={styles["stars"]} />
+          <MarsStars limit={10} className={styles["stars"]} />
         )}
       </div>
     </Layout>
