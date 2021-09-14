@@ -8,19 +8,28 @@ export const themes = {
 //Context
 export const ThemeContext = createContext(null);
 
+function changeBodyClass(variableState) {
+  if (variableState === themes.dark) {
+    document.body.classList.add(themes.dark);
+    document.body.classList.remove(themes.light);
+  } else {
+    document.body.classList.add(themes.light);
+    document.body.classList.remove(themes.dark);
+  }
+}
+
 //Provider
 export const ThemeContextProvider = ({ children }) => {
-  const [variableState, setVariableState] = React.useState();
+  let hasThemeStorage;
+  if (typeof window !== "undefined") {
+    hasThemeStorage = getStorageTheme();
+    changeBodyClass(hasThemeStorage);
+  }
+  const [variableState, setVariableState] = React.useState(hasThemeStorage);
 
   useEffect(() => {
     setVariableState(getStorageTheme());
-    if (variableState === themes.dark) {
-      document.body.classList.add(themes.dark);
-      document.body.classList.remove(themes.light);
-    } else {
-      document.body.classList.add(themes.light);
-      document.body.classList.remove(themes.dark);
-    }
+    changeBodyClass(variableState);
   }, [variableState]);
 
   //
