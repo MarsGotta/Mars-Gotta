@@ -23,7 +23,6 @@ export default function Website() {
         style={{
           fontSize: "19px",
           margin: "15px 0px",
-          color: "var(--color-text-primary)",
         }}
       >
         Esta web está desarrollada con amor y con las siguientes tecnologías.

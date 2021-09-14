@@ -25,6 +25,7 @@ export const ThemeContextProvider = ({ children }) => {
     hasThemeStorage = getStorageTheme();
     changeBodyClass(hasThemeStorage);
   }
+
   const [variableState, setVariableState] = React.useState(hasThemeStorage);
 
   useEffect(() => {

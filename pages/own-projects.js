@@ -19,7 +19,7 @@ export default function OwnProjects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <h4 style={{ color: "var(--color-text-primary)", margin: "15px 0" }}>
+        <h4 style={{ margin: "15px 0" }}>
           ¡Lo siento! Esta página está en construcción
         </h4>
         <p
@@ -27,7 +27,6 @@ export default function OwnProjects() {
             fontSize: "18px",
             margin: "0",
             marginBottom: "10px",
-            color: "var(--color-text-primary)",
           }}
         >
           Pronto tendré novedades para ti :)

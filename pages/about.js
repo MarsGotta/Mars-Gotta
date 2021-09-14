@@ -27,7 +27,6 @@ export default function About() {
         style={{
           lineHeight: "28px",
           fontSize: "18px",
-          color: "var(--color-text-primary)",
         }}
       >
         ¡Hola! Soy Marcela Gotta, soy una ninja en Javascript, especializada en
@@ -37,7 +36,6 @@ export default function About() {
         style={{
           lineHeight: "28px",
           fontSize: "18px",
-          color: "var(--color-text-primary)",
         }}
       >
         Desarrollo con todo tipo de framework de Javascript como: ReactJs,
@@ -47,7 +45,6 @@ export default function About() {
         style={{
           lineHeight: "28px",
           fontSize: "18px",
-          color: "var(--color-text-primary)",
         }}
       >
         Soy muy buena en el desarrollo CSS y HTML5, al igual que me desempeño
@@ -60,7 +57,6 @@ export default function About() {
         style={{
           lineHeight: "28px",
           fontSize: "18px",
-          color: "var(--color-text-primary)",
         }}
       >
         Me encanta enseñar a mis compañeros, he dado varias charlas y me
