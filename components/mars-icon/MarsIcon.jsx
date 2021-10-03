@@ -14,8 +14,10 @@ const MarsIcon = ({
   variant,
   slot
 }) => {
-  useEffect(() => {   
-    import("@web-inmars/mars-icon/dist/mars-icon");
+  useEffect(() => {    
+    setTimeout(() => {
+      import("@web-inmars/mars-icon/dist/mars-icon");
+    }, 10)
   }, [name]);
 
   const onClick = () => {
