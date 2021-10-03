@@ -17,8 +17,8 @@ const MarsIcon = ({
   useEffect(() => {    
     setTimeout(() => {
       import("@web-inmars/mars-icon/dist/mars-icon");
-    }, 10)
-  }, [name]);
+    }, 100)
+  });
 
   const onClick = () => {
     if (isDisabled) return;
