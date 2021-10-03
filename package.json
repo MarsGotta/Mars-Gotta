@@ -7,17 +7,19 @@
     "start": "next start"
   },
   "dependencies": {
+    "@web-inmars/mars-awesome-brands": "^0.2.0",
+    "@web-inmars/mars-awesome-solid": "^0.2.0",
     "@web-inmars/mars-button": "^0.1.0",
     "@web-inmars/mars-grid": "^0.1.0",
     "@web-inmars/mars-icon": "^0.1.0",
-    "@web-inmars/mars-awesome-brands": "^0.2.0",
-    "@web-inmars/mars-awesome-solid": "^0.2.0",
+    "@web-inmars/mars-switch": "^0.1.0",
     "@web-inmars/mars-textarea": "^0.1.0",
     "@web-inmars/mars-textfield": "^0.1.0",
-    "@web-inmars/mars-switch": "^0.1.0",
     "next": "10.0.3",
     "react": "17.0.1",
+    "react-content-loader": "^6.0.3",
     "react-dom": "17.0.1",
+    "react-loadingg": "^1.7.2",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

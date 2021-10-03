@@ -36,3 +36,12 @@ body.dark-theme {
   --color-text-primary: #ccd1d7;
   --color-divider-primary: #0c0712;
 }
+
+#loading {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.52);
+}
+
+.sc-dNLxif {
+  background-color: var(--color-background-loading, #e7531e) !important;
+}

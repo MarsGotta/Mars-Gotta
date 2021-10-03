@@ -1,5 +1,6 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 import {
   useThemeContext,
@@ -27,7 +28,6 @@ export default function Home() {
           <title>Inicio | Mars Gotta</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-
         <main className={styles.main}>
           <h1 className={styles.title}>Hey, soy Mars</h1>
           <h2 className={styles.subtitle}>

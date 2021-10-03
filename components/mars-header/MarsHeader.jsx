@@ -39,8 +39,10 @@ const MarsHeader = ({
       title: 'Contacto'
     }
   ]
+  
   const [isExpanded, setIsExpanded] = useState(false);
-  const [switchChecked, setSwitchChecked] = useState(false);
+  const [isFirst, setIsFirst] = useState(true);
+  const [switchChecked, setSwitchChecked] = useState(theme === 'dark-theme');
 
   const MarsSwitchRef = useRef(null);
 
@@ -58,11 +60,13 @@ const MarsHeader = ({
   }, []);
 
   useEffect(() => {
-    const isDark = theme === 'dark-theme';
     MarsSwitchRef.current.addEventListener('on-change', handleSwitch);
-    setSwitchChecked(isDark);
+    setSwitchChecked(theme === 'dark-theme');
     MarsSwitchRef.current.checked = switchChecked;
-  }, [MarsSwitchRef, switchChecked, theme]);
+    isFirst && setIsFirst(false);
+  }, [MarsSwitchRef, switchChecked])
+  
+  const selectIconName = () => switchChecked ? 'moon' : 'sun';
 
   return (
     <header className={styles['header']}>
@@ -70,7 +74,7 @@ const MarsHeader = ({
         <MarsLogo className={styles['logo']}></MarsLogo>
         <span className={styles['right-box']}>
           <mars-switch id="switchMode" class={styles['switch']} variant="xs,outline" ref={MarsSwitchRef}>
-            <MarsIcon className={styles['icon-switch']} name={switchChecked ? 'moon' : 'sun'} type="solid" slot="slider" size="17"></MarsIcon>
+            <MarsIcon className={styles['icon-switch']} name={isFirst ? 'moon' : selectIconName()} type="solid" slot="slider" size="17"></MarsIcon>
           </mars-switch>
           <MarsIcon className={styles['icon']} name="bars" type="solid" onClick={handleToggle}></MarsIcon>
         </span>
