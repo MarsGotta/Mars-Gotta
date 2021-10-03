@@ -1,10 +1,12 @@
 import { ThemeContextProvider } from "../core/theme-context";
-import { useIconSet } from "../core/useIconSet";
 import "../styles/globals.css";
 
-function MarsApp({ Component, pageProps }) {
-  useIconSet();
+(async () => {
+  await import("@web-inmars/mars-awesome-solid/dist/src/MarsAwesomeSolid.js");
+  await import("@web-inmars/mars-awesome-brands/dist/src/MarsAwesomeBrands.js");
+})();
 
+function MarsApp({ Component, pageProps }) {
   return (
     <ThemeContextProvider>
       <Component {...pageProps} />
