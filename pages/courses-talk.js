@@ -45,7 +45,14 @@ export default function CoursesTalk() {
           }}
         >
           En esta charla explico qué son los WebComponents y estos son parte del
-          futuro de la web.
+          futuro de la web. Puedes acceder al repositorio de la charla con las
+          diapositivas y el código desde{" "}
+          <a
+            style={{ color: "#e6362d" }}
+            href="https://github.com/MarsGotta/devcast-series-webcomponent"
+          >
+            aquí
+          </a>
         </p>
       </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
