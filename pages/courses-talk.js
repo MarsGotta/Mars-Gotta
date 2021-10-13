@@ -19,6 +19,37 @@ export default function CoursesTalk() {
       </Head>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <h3 style={{ fontWeight: 400, color: "#e6362d", margin: "15px 0 0" }}>
+          Una nueva web con WebComponents
+        </h3>
+        <p
+          style={{
+            fontSize: "18px",
+            margin: "0",
+            marginBottom: "10px",
+            color: "#e6362d",
+          }}
+        >
+          Devcast Codemotion
+        </p>
+        <iframe
+          width="100%"
+          src="https://www.youtube.com/embed/6J483DMLGT4"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <p
+          style={{
+            fontSize: "18px",
+            lineHeight: "1.5",
+          }}
+        >
+          En esta charla explico qué son los WebComponents y estos son parte del
+          futuro de la web.
+        </p>
+      </div>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <h3 style={{ fontWeight: 400, color: "#e6362d", margin: "15px 0 0" }}>
           PWA con React
         </h3>
         <p
