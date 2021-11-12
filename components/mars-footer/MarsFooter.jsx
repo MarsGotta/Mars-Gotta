@@ -14,7 +14,7 @@ const MarsFooter = ({
         target="_blank"
         rel="noopener noreferrer"
       >
-        Hecho artesanalmente y con amor <span style={{margin: '0 10px'}}>&#128156;</span> por Mars Gotta. 2005-2021
+        Hecho con amor <span style={{margin: '0 15px 0 10px'}}>&#128156;</span> por Mars Gotta
       </a>
     </footer>
   </>
