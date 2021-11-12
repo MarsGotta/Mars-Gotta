@@ -23,24 +23,24 @@ export default function Home() {
 
   return (
     <Layout landing theme={variableState} onSwitch={handleSwitch}>
-      <div className={styles.container}>
+      <div className={styles["container"]}>
         <Head>
           <title>Inicio | Mars Gotta</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main className={styles.main}>
-          <h1 className={styles.title}>Hey, soy Mars</h1>
-          <h2 className={styles.subtitle}>
-            <span className={styles.red}>Front-end</span> Developer
+        <main className={styles["main"]}>
+          <h1 className={styles["title"]}>Hey, soy Mars</h1>
+          <h2 className={styles["subtitle"]}>
+            <span className={styles["red"]}>Front-end</span> Developer
           </h2>
 
-          <p className={styles.description}>
+          <p className={styles["description"]}>
             Me gusta la física, la programación, escribir, los videojuegos,
             tengo un zoológico en mi casa y 18 tatuajes.
           </p>
 
           <div className={styles["button-box"]}>
-            <MarsButton className={styles.primary} href="/about">
+            <MarsButton className={styles["primary"]} href="/about">
               Más sobre mi
             </MarsButton>
             <MarsButton variant="secondary" href="/contact">
