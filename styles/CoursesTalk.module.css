@@ -1,0 +1,25 @@
+.talk-element {
+    display: flex;
+    flex-direction: column;
+}
+
+.talk-title {
+    color: #e6362d;
+    font-weight: 400;
+    margin: 15px 0 0;
+}
+
+.talk-site {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #e6362d;
+}
+
+.talk-description {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.talk-description a {
+    color: #e6362d;
+}

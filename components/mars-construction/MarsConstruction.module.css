@@ -1,0 +1,20 @@
+.construction-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.construction-title {
+    margin: 15px 0;
+}
+
+.construction-text {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.construction-img {
+    max-width: 300px;
+    align-self: center;
+    width: 100%;
+}

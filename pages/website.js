@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useThemeContext, setStorageTheme } from "../core/theme-context";
 
 import Layout from "./../layout/Layout";
+import styles from "../styles/Website.module.css";
 
 export default function Website() {
   const config = { title: "Esta web" };
@@ -19,30 +20,15 @@ export default function Website() {
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <p
-        style={{
-          fontSize: "19px",
-          margin: "15px 0px",
-        }}
-      >
+      <p className={styles["website-text"]}>
         Esta web está desarrollada con amor y con las siguientes tecnologías.
       </p>
-      <div
-        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
-      >
+      <div className={styles["image-box"]}>
         {svgList.map((name, key) => (
           <img
             key={key}
+            className={styles["website-image"]}
             src={`${name}.svg`}
-            width="22%"
-            style={{
-              margin: "5%",
-              background: "#f9fafbcc",
-              padding: "10px 15px",
-              border: "2px solid #e7531e",
-              borderRadius: "20px",
-              maxWidth: "150px",
-            }}
           ></img>
         ))}
       </div>

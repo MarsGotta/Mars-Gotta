@@ -38,3 +38,8 @@
 .input {
   margin-bottom: 15px;
 }
+
+.contact-message {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}

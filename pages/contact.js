@@ -104,7 +104,7 @@ export default function Contact() {
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <p style={{ fontSize: "18px", margin: "15px 0" }}>
+      <p class={styles["contact-message"]}>
         ¡Hola! Si me quieres hacer una pregunta o contactar conmigo, rellena
         siguiente el formulario.
       </p>
