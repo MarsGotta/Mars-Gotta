@@ -42,7 +42,7 @@ export default function CoursesTalk() {
         <div className={styles["talk-box"]}>
           <article className={styles["talk-element"]}>
             <h3 className={styles["talk-title"]}>
-              Una nueva web con WebComponents
+              Charla sobre WebComponents
             </h3>
             <span className={styles["talk-site"]}>
               Devcast Codemotion
