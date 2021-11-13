@@ -75,10 +75,10 @@ export default function CoursesTalk() {
       </section>
       <section>
         <h2 className={styles["principal-title"]}>Cursos</h2>
-        <p className={styles["talk-description"]}>A lo largo de mi carrera como profesional he tenido la oportunidad de impartir varios cursos de diferentes tecnologías Frontend.</p>
+        <p className={styles["course-description"]}>A lo largo de mi carrera como profesional he tenido la oportunidad de impartir varios cursos de diferentes tecnologías Frontend.</p>
         <article>
-          <h3 className={styles["talk-title"]}>Fictizia</h3>
-          <ul className={styles["talk-description"]}>
+          <h3 className={styles["course-title"]}>Fictizia</h3>
+          <ul className={styles["course-description"]}>
             <li>Curso y consultoría de Vue.js</li>
             <li>Curso de React Avanzado</li>
             <li>Curso de Angular</li>
@@ -88,8 +88,8 @@ export default function CoursesTalk() {
           </ul>
         </article>
         <article>
-          <h3 className={styles["talk-title"]}>Learn InMars</h3>
-          <ul className={styles["talk-description"]}>
+          <h3 className={styles["course-title"]}>Learn InMars</h3>
+          <ul className={styles["course-description"]}>
             <li>Curso superior en HTML, CSS, Javascript y VueJS con Vuex</li>
             <li>Curso de Angular</li>
             <li>Curso de Vue con Vuex</li>

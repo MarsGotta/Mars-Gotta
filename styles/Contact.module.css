@@ -32,14 +32,33 @@
 .button-send {
   width: 100%;
   max-width: 600px;
-  margin: auto;
+  margin-left: 20px;
 }
 
 .input {
-  margin-bottom: 15px;
+  margin: 15px;
+  width: 100%;
+}
+
+.input-name, .input-email {
+  width: 46%;
 }
 
 .contact-message {
-  margin: 15px 0;
+  margin: 15px;
   font-size: 1.1rem;
+}
+
+.form-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 780px) {
+  .input-name, .input-email {
+    width: 100%;
+  }
 }

@@ -104,17 +104,17 @@ export default function Contact() {
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <p class={styles["contact-message"]}>
-        ¡Hola! Si me quieres hacer una pregunta o contactar conmigo, rellena
-        siguiente el formulario.
-      </p>
-      <form role="form" onSubmit={handlePress}>
+      <form role="form" className={styles["form-box"]} onSubmit={handlePress}>
+        <p class={styles["contact-message"]}>
+          ¡Hola! Si me quieres hacer una pregunta o contactar conmigo, rellena
+          siguiente el formulario.
+        </p>
         <MarsInput
           placeholder="Nombre"
           name="name"
           onChange={handleChange}
           onEnter={handlePress}
-          className={`${validateInput("name")} ${styles["input"]}`}
+          className={`${validateInput("name")} ${styles["input-name"]} ${styles["input"]}`}
           value={state.name}
         />
         <MarsInput
@@ -122,7 +122,7 @@ export default function Contact() {
           name="email"
           onChange={handleChange}
           onEnter={handlePress}
-          className={`${validateInput("email")} ${styles["input"]}`}
+          className={`${validateInput("email")} ${styles["input-email"]} ${styles["input"]}`}
           value={state.email}
         />
         <MarsInput
