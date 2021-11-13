@@ -32,30 +32,6 @@ export default function CoursesTalk() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section>
-        <h2 className={styles["principal-title"]}>Cursos</h2>
-        <p>A lo largo de mi carrera como profesional he tenido la oportunidad de impartir varios cursos de diferentes tecnologías Frontend.</p>
-        <article>
-          <h3 className={styles["talk-title"]}>Fictizia</h3>
-          <ul>
-            <li>Curso y consultoría de Vue.js para trabajadores de Procesia</li>
-            <li>Curso de React Avanzado</li>
-            <li>Curso de Angular</li>
-            <li>Curso de Vue con Vuex</li>
-            <li>Curso de Profesional React con Redux</li>
-            <li>Curso de Angular con RxJS</li>
-          </ul>
-        </article>
-        <article>
-          <h3 className={styles["talk-title"]}>Learn InMars</h3>
-          <ul>
-            <li>Curso superior en HTML, CSS, Javascript y VueJS con Vuex</li>
-            <li>Curso de Angular</li>
-            <li>Curso de Vue con Vuex</li>
-            <li>Curso de React con Redux</li>
-          </ul>
-        </article>
-      </section>
-      <section>
         <h2 className={styles["principal-title"]}>Charlas</h2>
         <article className={styles["talk-element"]}>
           <h3 className={styles["talk-title"]}>
@@ -87,6 +63,30 @@ export default function CoursesTalk() {
             librería React pero los mismos pasos se pueden implementar en otros
             frameworks o en Javascript Vainilla
           </p>
+        </article>
+      </section>
+      <section>
+        <h2 className={styles["principal-title"]}>Cursos</h2>
+        <p>A lo largo de mi carrera como profesional he tenido la oportunidad de impartir varios cursos de diferentes tecnologías Frontend.</p>
+        <article>
+          <h3 className={styles["talk-title"]}>Fictizia</h3>
+          <ul>
+            <li>Curso y consultoría de Vue.js para trabajadores de Procesia</li>
+            <li>Curso de React Avanzado</li>
+            <li>Curso de Angular</li>
+            <li>Curso de Vue con Vuex</li>
+            <li>Curso de Profesional React con Redux</li>
+            <li>Curso de Angular con RxJS</li>
+          </ul>
+        </article>
+        <article>
+          <h3 className={styles["talk-title"]}>Learn InMars</h3>
+          <ul>
+            <li>Curso superior en HTML, CSS, Javascript y VueJS con Vuex</li>
+            <li>Curso de Angular</li>
+            <li>Curso de Vue con Vuex</li>
+            <li>Curso de React con Redux</li>
+          </ul>
         </article>
       </section>
     </Layout>

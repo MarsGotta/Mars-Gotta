@@ -15,7 +15,7 @@ export default function About() {
   const ABILITIES = [
     {
       title: "Javascript",
-      percentage: "90%",
+      percentage: "95%",
     },
     {
       title: "CSS",
@@ -27,7 +27,7 @@ export default function About() {
     },
     {
       title: "WebComponents",
-      percentage: "80%",
+      percentage: "88%",
     },
     {
       title: "LitElement",
@@ -48,6 +48,18 @@ export default function About() {
     {
       title: "NodeJS",
       percentage: "60%",
+    },
+    {
+      title: "Express",
+      percentage: "50%",
+    },
+    {
+      title: "SASS",
+      percentage: "80%",
+    },
+    {
+      title: "Pug",
+      percentage: "80%",
     }
   ];
 
