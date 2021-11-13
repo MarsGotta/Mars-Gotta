@@ -1,6 +1,7 @@
 .talk-element {
     display: flex;
     flex-direction: column;
+    max-width: 450px;
 }
 
 .talk-title {
@@ -15,6 +16,14 @@
     color: var(--color-secondary);
 }
 
+.talk-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .talk-description {
     font-size: 18px;
     line-height: 1.5;
@@ -26,4 +35,9 @@
 
 .principal-title {
     margin: 0;
+}
+
+.video {
+    height: 250px;
+    max-width: 450px;
 }

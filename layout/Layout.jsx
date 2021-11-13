@@ -13,7 +13,8 @@ const Layout = ({
 	landing,
 	config,
 	theme,
-	onSwitch
+	onSwitch,
+	onCollapsed
 }) => {
 	const changeTheme = (checked) => {
 		const theme = checked ? themes.dark : themes.light;
@@ -22,7 +23,7 @@ const Layout = ({
 
   	return (
 		<>
-			<MarsHeader changeSwitch={e => changeTheme(e)} theme={theme} />
+			<MarsHeader changeSwitch={e => changeTheme(e)} theme={theme} onCollapsed={onCollapsed}/>
 			{renderSubHeader(landing, config)}
 			<section style={{maxWidth: '1024px', margin: 'auto'}}>
 				<main style={!landing ? { padding: '0 15px', fontSize: '20px', color: "var(--color-text-primary)", fontWeight: 300, minHeight: 'calc(100vh - 308px)' } : {}}>

@@ -8,19 +8,26 @@ import MarsSocial from '../mars-social/MarsSocial'
 const MarsMenu = ({
   children,
   items,
-  isExpanded
+  isExpanded,
+  onClick,
 }) => {
 
+  const handleClick = (e) => {
+    e.preventDefault()
+    onClick && onClick({
+      detail: isExpanded
+    })
+  }
 
   return (
-      <nav className={`${styles['collapsed']} ${isExpanded ? styles['is-expanded'] : ''}`}>
+      <nav onClick={handleClick} className={`${styles['collapsed']} ${isExpanded ? styles['is-expanded'] : ''}`}>
         <ul className={styles['list']}>
           <MarsStars limit={10} className={styles['stars']} />
           {items.map(({ href, title }, key) => (
             <li className={styles['item']} key={key}><Link href={href}>{title}</Link></li>
           ))}
         </ul>
-      <MarsSocial className={styles['social']} />
+        <MarsSocial className={styles['social']} />
       </nav>
   );
 };

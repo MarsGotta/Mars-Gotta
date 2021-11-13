@@ -7,7 +7,8 @@ import MarsIcon from '../mars-icon/MarsIcon.jsx'
 
 const MarsHeader = ({
   changeSwitch,
-  theme
+  theme,
+  onCollapsed
 }) => {
   const menuItems = [
     {
@@ -46,6 +47,22 @@ const MarsHeader = ({
 
   const MarsSwitchRef = useRef(null);
 
+  useEffect(() => {
+    import("@web-inmars/mars-switch/dist/mars-switch.js");
+
+  }, []);
+
+  useEffect(() => {
+    MarsSwitchRef.current.addEventListener('on-change', handleSwitch);
+    setSwitchChecked(theme === 'dark-theme');
+    MarsSwitchRef.current.checked = switchChecked;
+    isFirst && setIsFirst(false);
+  }, [MarsSwitchRef, switchChecked])
+
+  useEffect(() => {
+    onCollapsed && onCollapsed(isExpanded);
+  }, [isExpanded])
+
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
   }
@@ -55,16 +72,9 @@ const MarsHeader = ({
     changeSwitch && changeSwitch(target.checked);
   }
 
-  useEffect(() => {
-    import("@web-inmars/mars-switch/dist/mars-switch.js");
-  }, []);
-
-  useEffect(() => {
-    MarsSwitchRef.current.addEventListener('on-change', handleSwitch);
-    setSwitchChecked(theme === 'dark-theme');
-    MarsSwitchRef.current.checked = switchChecked;
-    isFirst && setIsFirst(false);
-  }, [MarsSwitchRef, switchChecked])
+  function handleClick () {
+    setIsExpanded(false);
+  }
   
   const selectIconName = () => switchChecked ? 'moon' : 'sun';
 
@@ -78,7 +88,7 @@ const MarsHeader = ({
           </mars-switch>
           <MarsIcon className={styles['icon']} name="bars" type="solid" onClick={handleToggle}></MarsIcon>
         </span>
-        <MarsMenu items={menuItems} isExpanded={isExpanded}></MarsMenu>
+        <MarsMenu items={menuItems} isExpanded={isExpanded} onClick={handleClick}></MarsMenu>
       </div>
     </header>
   );

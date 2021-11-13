@@ -11,23 +11,23 @@ import MarsGrid from "./../components/mars-grid/MarsGrid";
 export default function About() {
   const config = { title: "Sobre mi" };
   const { variableState, setVariableState } = useThemeContext();
-  const [ moreText, setMoreText ] = useState(false);
-  const ABILITIES = [
+  const [ moreText, setMoreText ] = useState({presentation: false, skills: false});
+  const SKILLS = [
     {
       title: "Javascript",
       percentage: "95%",
     },
     {
       title: "CSS",
-      percentage: "90%",
+      percentage: "95%",
     },
     {
       title: "HTML",
-      percentage: "90%",
+      percentage: "92%",
     },
     {
       title: "WebComponents",
-      percentage: "88%",
+      percentage: "90%",
     },
     {
       title: "LitElement",
@@ -35,23 +35,19 @@ export default function About() {
     },
     {
       title: "React",
+      percentage: "97%",
+    },
+    {
+      title: "NextJS",
       percentage: "90%",
     },
     {
       title: "Angular",
-      percentage: "80%",
-    },
-    {
-      title: "Vue",
       percentage: "90%",
     },
     {
-      title: "NodeJS",
-      percentage: "60%",
-    },
-    {
-      title: "Express",
-      percentage: "50%",
+      title: "Vue",
+      percentage: "95%",
     },
     {
       title: "SASS",
@@ -60,7 +56,11 @@ export default function About() {
     {
       title: "Pug",
       percentage: "80%",
-    }
+    },
+    {
+      title: "NodeJS",
+      percentage: "60%",
+    },
   ];
 
   const handleSwitch = (theme) => {
@@ -68,8 +68,8 @@ export default function About() {
     setStorageTheme(theme);
   };
 
-  const handleMoreText = () => {
-    setMoreText(!moreText);
+  const handleMoreText = (type) => {
+    setMoreText({ ...moreText, [type]: !moreText[type]});
   };
 
   const renderMoreText = () => {
@@ -94,10 +94,12 @@ export default function About() {
     )
   };
 
-  const renderAbilities = () => {
-    return ABILITIES.map((ability) => {
-      const { title, percentage } = ability;
-      return <MarsProgressBar className={styles["progress-bar"]} title={title} percentage={percentage}/>
+  const renderSkills = () => {
+    return SKILLS.map((ability, key) => {
+      if (key < 9 && !moreText.skills || moreText.skills) {
+        const { title, percentage } = ability;
+        return <MarsProgressBar key={key} className={styles["progress-bar"]} title={title} percentage={percentage}/>
+      }
     })
   };
 
@@ -119,16 +121,19 @@ export default function About() {
             Desarrollo con todo tipo de framework de Javascript como: ReactJs,
             LitElement, Stencil, VueJs, Angular, Sencha y Vanilla JavaScript.
           </p>
-          {moreText && renderMoreText()}
-          <span className={styles["text-button"]} onClick={handleMoreText}>
-            {!moreText ? 'Leer más' : 'Leer menos.'}
+          {moreText.presentation && renderMoreText()}
+          <span className={styles["text-button"]} onClick={() => handleMoreText('presentation')}>
+            {!moreText.presentation ? 'Leer más' : 'Leer menos'}
           </span>
         </article>
-        <article className={styles["abilities"]}>
+        <article className={styles["skills"]}>
           <h3>Habilidades</h3>
           <section className={styles["progress-box"]}>
-            {renderAbilities()}
-        </section>
+            {renderSkills()}
+          </section>
+          <span className={styles["text-button"]} onClick={() => handleMoreText('skills')}>
+            {!moreText.skills ? 'Ver más' : 'Ver menos'}
+          </span>
         </article>
       </section>
     </Layout>
