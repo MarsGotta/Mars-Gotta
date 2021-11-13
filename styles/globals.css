@@ -11,6 +11,12 @@ body {
   --color-text-primary: #1f1331;
   --color-bg-secondary: #1f1331;
   --color-divider-primary: #eaeaea;
+  --color-primary: #5f3993;
+  --color-primary-400: #2e1b47;
+  --color-secondary: #e6362d;
+  --color-tertiary: #e7531e;
+  --color-secondary-400: #951f19;
+  --color-tertiary-400: #a54522;
 }
 
 body.light-theme {
@@ -43,5 +49,5 @@ body.dark-theme {
 }
 
 .sc-dNLxif {
-  background-color: var(--color-background-loading, #e7531e) !important;
+  background-color: var(--color-background-loading, var(--color-tertiary)) !important;
 }

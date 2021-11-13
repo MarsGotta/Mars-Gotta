@@ -24,7 +24,7 @@ const Layout = ({
 		<>
 			<MarsHeader changeSwitch={e => changeTheme(e)} theme={theme} />
 			{renderSubHeader(landing, config)}
-			<section style={{maxWidth: '1140px', margin: 'auto'}}>
+			<section style={{maxWidth: '1024px', margin: 'auto'}}>
 				<main style={!landing ? { padding: '0 15px', fontSize: '20px', color: "var(--color-text-primary)", fontWeight: 300, minHeight: 'calc(100vh - 308px)' } : {}}>
 					{children}
 				</main>	

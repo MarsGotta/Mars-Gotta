@@ -20,7 +20,7 @@
 }
 
 .title a {
-  color: #e6362d;
+  color: var(--color-secondary);
   text-decoration: none;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .red {
-  color: #e6362d;
+  color: var(--color-secondary);
 }
 
 .title,

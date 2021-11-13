@@ -1,0 +1,19 @@
+.outer {
+    display: flex;
+    align-items: center;
+    height: 15px;
+    width: 100%;
+    border: 2px solid var(--color-primary);
+    border-radius: 50px;
+    background: var(--color-primary-400);
+    box-sizing: content-box;
+  }
+  
+  .inner {
+    height: 100%;
+    width: 250px;
+    background: var(--color-tertiary);
+    opacity: 0.8;
+    border-radius: 25px;
+    transition: width 100ms ease-out;
+  }
