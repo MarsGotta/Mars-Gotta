@@ -31,17 +31,17 @@ export default function Home() {
         <main className={styles["main"]}>
           <h1 className={styles["title"]}>Hey, soy Mars</h1>
           <h2 className={styles["subtitle"]}>
-            <span className={styles["red"]}>Front-end</span> Developer
+            Expert <span className={styles["red"]}>Front-end</span> Developer
           </h2>
 
           <p className={styles["description"]}>
-            Me gusta la física, la programación, escribir, los videojuegos,
-            tengo un zoológico en mi casa y 18 tatuajes.
+            Tengo más de <span className={styles["red"]}>10 años</span>  de experiencia. Me gusta la física, la programación, escribir, los videojuegos y
+            tengo un zoológico en mi casa.
           </p>
 
           <div className={styles["button-box"]}>
             <MarsButton className={styles["primary"]} href="/about">
-              Más sobre mi
+              Sobre mi
             </MarsButton>
             <MarsButton variant="secondary" href="/contact">
               Contacto
