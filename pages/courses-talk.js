@@ -77,14 +77,20 @@ export default function CoursesTalk() {
         <h2 className={styles["principal-title"]}>Cursos</h2>
         <p className={styles["course-description"]}>A lo largo de mi carrera como profesional he tenido la oportunidad de impartir varios cursos de diferentes tecnologías Frontend.</p>
         <article>
+          <h3 className={styles["course-title"]}>Codemotion</h3>
+          <ul className={styles["course-description"]}>
+            <li><a href="https://talks.codemotion.com/introduccin?playlist=web-component-desde-0" target="_blank">Web Components desde 0 - Edu Path - 2022, Online</a></li>
+          </ul>
+        </article>
+        <article>
           <h3 className={styles["course-title"]}>Fictizia</h3>
           <ul className={styles["course-description"]}>
-            <li>Curso y consultoría de Vue.js</li>
-            <li>Curso de React Avanzado</li>
-            <li>Curso de Angular</li>
-            <li>Curso de Vue con Vuex</li>
-            <li>Curso de Profesional React con Redux</li>
-            <li>Curso de Angular con RxJS</li>
+            <li>Curso y consultoría de Vue.js - 2019, Madrid</li>
+            <li>Curso de Vue con Vuex - 2019, Madrid</li>
+            <li>Curso de React Avanzado - 2019, Online</li>
+            <li>Curso de Angular - 2020, Online</li>
+            <li>Curso de Profesional React con Redux - 2020, Online</li>
+            <li>Curso de Angular con RxJS - 2021, Online</li>
           </ul>
         </article>
         <article>

@@ -10,11 +10,7 @@
 }
 
 .website-image {
-    margin: 15px 5%;
-    background: #e7531e4f;
-    padding: 10px 15px;
-    border: 2px solid var(--color-tertiary);
-    border-radius: 20px;
-    max-width: 200px;
+    margin: 15px;
+    max-width: 250px;
     width: 40%;
 }

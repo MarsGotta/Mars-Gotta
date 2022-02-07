@@ -1,18 +1,24 @@
 import Head from "next/head";
-import { useThemeContext, setStorageTheme } from "../core/theme-context";
+import { useEffect, useState }  from 'react';
+import { useThemeContext, setStorageTheme, getStorageTheme } from "../core/theme-context";
 
 import Layout from "./../layout/Layout";
 import styles from "../styles/Website.module.css";
 
 export default function Website() {
   const config = { title: "Esta web" };
-  const svgList = ["html5", "css3", "javascript", "react", "nextjs", "nodejs"];
+  const svgList = ["html", "css", "javascript", "react", "next", "node"];
   const { variableState, setVariableState } = useThemeContext();
+  const [ theme, setTheme ] = useState()
 
   const handleSwitch = (theme) => {
     setVariableState(theme);
     setStorageTheme(theme);
   };
+
+  useEffect(() => {
+    setTheme(variableState);
+  }, [variableState]);
 
   return (
     <Layout config={config} theme={variableState} onSwitch={handleSwitch}>
@@ -21,17 +27,17 @@ export default function Website() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <p className={styles["website-text"]}>
-        Esta web está desarrollada con amor y con las siguientes tecnologías.
+        Esta web está desarrollada con amor desde 0, de forma artesanal y con las siguientes tecnologías.
       </p>
-      <div className={styles["image-box"]}>
+      <article className={styles["image-box"]}>
         {svgList.map((name, key) => (
           <img
             key={key}
             className={styles["website-image"]}
-            src={`${name}.svg`}
+            src={`${name}-${theme}.png`}
           ></img>
         ))}
-      </div>
+      </article>
     </Layout>
   );
 }

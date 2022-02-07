@@ -56,7 +56,6 @@ export const getStorageTheme = () => {
   return localStorage.getItem("theme");
 };
 
-//
 export function useThemeContext() {
   const context = useContext(ThemeContext);
 

@@ -40,7 +40,7 @@
     padding: 0;
 }
 
-.talk-description a {
+.talk-description a, .course-description a {
     color: var(--color-secondary);
 }
 

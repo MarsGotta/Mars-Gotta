@@ -10,7 +10,7 @@ const MarsFooter = ({
     <MarsSocial />
     <footer className={styles.footer}>
       <a
-        href="https://www.marsgotta.com"
+        href="https://marsgotta.com"
         target="_blank"
         rel="noopener noreferrer"
       >
