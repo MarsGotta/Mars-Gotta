@@ -16,8 +16,8 @@ export default function Website() {
     setStorageTheme(theme);
   };
 
-  useEffect(() => {
-    setTheme(variableState);
+  useEffect(async () => {
+    setTheme(variableState || "light-theme");
   }, [variableState]);
 
   return (
