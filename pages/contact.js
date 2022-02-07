@@ -104,60 +104,65 @@ export default function Contact() {
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <form role="form" className={styles["form-box"]} onSubmit={handlePress}>
-        <p class={styles["contact-message"]}>
-          ¡Hola! Si me quieres hacer una pregunta o contactar conmigo, rellena
-          siguiente el formulario.
-        </p>
-        <MarsInput
-          placeholder="Nombre"
-          name="name"
-          onChange={handleChange}
-          onEnter={handlePress}
-          className={`${validateInput("name")} ${styles["input-name"]} ${styles["input"]}`}
-          value={state.name}
-        />
-        <MarsInput
-          placeholder="E-mail"
-          name="email"
-          onChange={handleChange}
-          onEnter={handlePress}
-          className={`${validateInput("email")} ${styles["input-email"]} ${styles["input"]}`}
-          value={state.email}
-        />
-        <MarsInput
-          placeholder="Asunto"
-          name="subject"
-          onChange={handleChange}
-          onEnter={handlePress}
-          className={`${validateInput("subject")} ${styles["input"]}`}
-          value={state.subject}
-        />
-        <MarsTextarea
-          placeholder="Mensaje"
-          name="message"
-          onChange={handleChange}
-          className={`${validateInput("message")} ${styles["input"]}`}
-          value={state.message}
-        />
+      <div role="presentation" className={styles["form-info"]}>
+        <form role="form" className={styles["form-box"]} onSubmit={handlePress}>
+          <p class={styles["contact-message"]}>
+            ¡Hola! Si me quieres hacer una pregunta o contactar conmigo, rellena
+            siguiente el formulario.
+          </p>
+          <MarsInput
+            placeholder="Nombre"
+            name="name"
+            onChange={handleChange}
+            onEnter={handlePress}
+            className={`${validateInput("name")} ${styles["input-name"]} ${styles["input"]}`}
+            value={state.name}
+          />
+          <MarsInput
+            placeholder="E-mail"
+            name="email"
+            onChange={handleChange}
+            onEnter={handlePress}
+            className={`${validateInput("email")} ${styles["input-email"]} ${styles["input"]}`}
+            value={state.email}
+          />
+          <MarsInput
+            placeholder="Asunto"
+            name="subject"
+            onChange={handleChange}
+            onEnter={handlePress}
+            className={`${validateInput("subject")} ${styles["input"]}`}
+            value={state.subject}
+          />
+          <MarsTextarea
+            placeholder="Mensaje"
+            name="message"
+            onChange={handleChange}
+            className={`${validateInput("message")} ${styles["input"]}`}
+            value={state.message}
+          />
 
-        <div className={styles["validate-box"]}>
-          <MarsButton onClick={handlePress} className={styles["button-send"]}>
-            Enviar
-          </MarsButton>
-          {!isValid.all ? (
-            <span className={styles["validate-span"]}>
-              Rellena todos los campos.
-            </span>
-          ) : null}
+          <div className={styles["validate-box"]} role="presentation">
+            <MarsButton onClick={handlePress} className={styles["button-send"]}>
+              Enviar
+            </MarsButton>
+            {!isValid.all && (
+              <span className={styles["validate-span"]}>
+                Rellena todos los campos.
+              </span>
+            )}
 
-          {isSended ? (
-            <span className={styles["sended-span"]}>
-              Formulario enviado! :). Pronto me pondré en contacto contigo.
-            </span>
-          ) : null}
-        </div>
-      </form>
+            {isSended && (
+              <span className={styles["sended-span"]}>
+                Formulario enviado! :). Pronto me pondré en contacto contigo.
+              </span>
+            )}
+          </div>
+        </form>
+        <article>
+          <img src="/astronauta-contact.png" alt="contact-info" />
+        </article>
+      </div>
     </Layout>
   );
 }

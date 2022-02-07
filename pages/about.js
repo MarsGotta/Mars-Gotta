@@ -84,7 +84,7 @@ export default function About() {
         </p>
         <p className={styles["about-text"]}>
           Me encanta enseñar a mis compañeros, he dado varias charlas y me
-          considero una persona con fuertes rasgos de liderazg. He podido dirigir
+          considero una persona con fuertes rasgos de liderazgo. He podido dirigir
           buenos equipos de Front con los que he aprendido mucho a lo largo de
           cada Sprint. Suelo utilizar metodologías ágiles con el framework de
           trabajo Scrum. Me encanta esa filosofía de trabajo e intento cumplirla

@@ -41,7 +41,7 @@
 }
 
 .input-name, .input-email {
-  width: 46%;
+  width: 45%;
 }
 
 .contact-message {
@@ -53,12 +53,37 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 600px;
+}
+
+.form-box h3 {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.form-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 @media (max-width: 780px) {
   .input-name, .input-email {
     width: 100%;
+  }
+
+  .form-info {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 946px) {
+  .form-box {
+    max-width: 100%;
+  }
+
+  .form-info {
+    justify-content: center;
   }
 }

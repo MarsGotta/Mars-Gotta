@@ -50,7 +50,7 @@ const MarsSocial = ({
           variant={variant} 
           className={`${styles['social-icon']} ${styles[variant]}`} 
           onClick={onClickHandler} 
-          size={35} 
+          size="35" 
           type={type} 
         />)
       })}

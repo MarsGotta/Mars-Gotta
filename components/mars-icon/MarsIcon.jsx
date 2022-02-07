@@ -30,7 +30,7 @@ const MarsIcon = ({
   const completeClassName = `${isDisabled ? styles['disabled'] : ''} ${href ? styles['href'] : ''} ${className}`;
 
   return (
-    <mars-icon class={completeClassName} name={name} type={type} width={size} height={size} variant={variant} onClick={() => onClick()} slot={slot} />
+    <mars-icon class={completeClassName} name={name} type={type} width={size} height={size} variant={variant} onClick={onClick} slot={slot} />
   );
 };
 
