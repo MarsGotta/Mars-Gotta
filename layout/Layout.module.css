@@ -1,0 +1,11 @@
+.landing { 
+    padding: 0 15px;
+    color: var(--color-text-primary);
+    font-weight: 300;
+    min-height: calc(100vh - 308px);
+}
+
+.section {
+    max-width: 1024px;
+    margin: auto;
+}

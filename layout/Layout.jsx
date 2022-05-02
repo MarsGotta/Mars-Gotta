@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import {themes} from '../core/theme-context';
+import { themes } from '../core/theme-context';
+import styles from './Layout.module.css'
 import MarsHeader from '../components/mars-header/MarsHeader';
 import MarsFooter from '../components/mars-footer/MarsFooter';
 import MarsSubHeader from '../components/mars-sub-header/MarsSubHeader';
-const renderSubHeader = (landing, { title }) => {
-	if(landing) return;
-	return <MarsSubHeader title={title} />
-}
+
 const Layout = ({
   	children,
 	landing,
@@ -21,18 +19,21 @@ const Layout = ({
 		onSwitch(theme);
 	}
 
+	const renderSubHeader = (landing, { title }) => {
+		if(landing) return;
+		return <MarsSubHeader title={title} />
+	}
+
   	return (
-		<>
-			<MarsHeader changeSwitch={e => changeTheme(e)} theme={theme} onCollapsed={onCollapsed}/>
+		<section className={styles['section']}>
+			<MarsHeader changeSwitch={e => changeTheme(e)} theme={theme} onCollapsed={onCollapsed} />
 			{renderSubHeader(landing, config)}
-			<section style={{maxWidth: '1024px', margin: 'auto'}}>
-				<main style={!landing ? { padding: '0 15px', fontSize: '20px', color: "var(--color-text-primary)", fontWeight: 300, minHeight: 'calc(100vh - 308px)' } : {}}>
-					{children}
-				</main>	
-			</section>
+			<main className={!landing ? styles['landing'] : undefined}>
+				{children}
+			</main>	
 			<MarsFooter />
-		</>
-  );
+		</section>
+	);
 };
 
 Layout.defaultProps = {

@@ -32,12 +32,14 @@ MarsButton.defaultProps = {
   variant: '',
   href: '',
   onClick: () => {},
+  className: ''
 };
 
 MarsButton.propTypes = {
   variant: PropTypes.string,
   href: PropTypes.string,
   onClick: PropTypes.func,
+  className: PropTypes.string
 };
 
 export default MarsButton;

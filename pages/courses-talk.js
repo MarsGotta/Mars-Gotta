@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Head from "next/head";
 import { useThemeContext, setStorageTheme } from "../core/theme-context";
 import styles from "../styles/CoursesTalk.module.css";
@@ -8,7 +7,6 @@ import Layout from "./../layout/Layout";
 export default function CoursesTalk() {
   const config = { title: "Charlas y cursos" };
   const { variableState, setVariableState } = useThemeContext();
-  const [showVideos, setShowVideos] = useState(false);
 
   const handleSwitch = (theme) => {
     setVariableState(theme);
@@ -16,7 +14,7 @@ export default function CoursesTalk() {
   };
 
   const renderVideo = (url) => {
-    return showVideos && (
+    return (
       <iframe
         className={styles.video}
         width="100%"
@@ -27,12 +25,8 @@ export default function CoursesTalk() {
     );
   }
 
-  const handleCollapsed = (isCollapsed) => {
-    setShowVideos(!isCollapsed);
-  };
-
   return (
-    <Layout config={config} theme={variableState} onSwitch={handleSwitch} onCollapsed={handleCollapsed}>
+    <Layout config={config} theme={variableState} onSwitch={handleSwitch}>
       <Head>
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />

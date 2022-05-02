@@ -6,6 +6,7 @@
   align-items: center;
   color: var(--color-text-primary);
   font-weight: 300;
+  z-index: 1;
 }
 
 .footer img {

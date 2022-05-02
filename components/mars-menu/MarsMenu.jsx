@@ -20,11 +20,13 @@ const MarsMenu = ({
   }
 
   return (
-      <nav onClick={handleClick} className={`${styles['collapsed']} ${isExpanded ? styles['is-expanded'] : ''}`}>
+      <nav onClick={handleClick} className={`${styles['collapsed']} ${isExpanded ? styles['is-expanded'] : undefined}`}>
         <ul className={styles['list']}>
           <MarsStars limit={10} className={styles['stars']} />
           {items.map(({ href, title }, key) => (
-            <li className={styles['item']} key={key}><Link href={href}>{title}</Link></li>
+            <li className={styles['item']} key={key}>
+              <Link href={href}>{title}</Link>
+            </li>
           ))}
         </ul>
         <MarsSocial className={styles['social']} />

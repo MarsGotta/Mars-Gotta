@@ -58,7 +58,7 @@
 
 .description {
   line-height: 1.5;
-  font-size: 23px;
+  font-size: 1.4rem;
   color: var(--color-text-primary);
   font-weight: 300;
 }

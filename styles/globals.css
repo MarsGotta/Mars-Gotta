@@ -19,7 +19,7 @@ body {
   --color-tertiary-400: #a54522;
 }
 
-body.light-theme {
+html, body.light-theme {
   background-color: white;
   --color-background: white;
   --color-text-primary: #1f1331;

@@ -6,8 +6,8 @@
 }
 
 .about-text {
-    line-height: 28px;
-    font-size: 18px;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
     margin: 10px 0;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .skills h4 {
-    font-size: 18px;
+    font-size: 1.2rem;
     margin: 10px 0;
 }
 

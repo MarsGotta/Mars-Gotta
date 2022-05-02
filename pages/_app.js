@@ -3,14 +3,8 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { WaveTopBottomLoading } from "react-loadingg";
 import "../styles/globals.css";
-
-(async () => {
-  await import("@web-inmars/mars-awesome-solid/dist/src/MarsAwesomeSolid.js");
-})();
-
-(async () => {
-  await import("@web-inmars/mars-awesome-brands/dist/src/MarsAwesomeBrands.js");
-})();
+import "@web-inmars/mars-awesome-solid/dist/src/MarsAwesomeSolid.js";
+import "@web-inmars/mars-awesome-brands/dist/src/MarsAwesomeBrands.js";
 
 function MarsApp({ Component, pageProps }) {
   const router = useRouter();
@@ -20,6 +14,7 @@ function MarsApp({ Component, pageProps }) {
     const handleStart = (url) => {
       url !== router.pathname ? setLoading(true) : setLoading(false);
     };
+    
     const handleComplete = (url) => {
       setLoading(false);
     };
