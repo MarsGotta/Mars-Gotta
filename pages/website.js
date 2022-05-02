@@ -1,27 +1,27 @@
 import Head from "next/head";
 import { useEffect, useState }  from 'react';
-import { useThemeContext, setStorageTheme, getStorageTheme } from "../core/theme-context";
+import { useThemeContext } from "../core/theme-context";
+import { useConfigContext } from "../core/config-context";
 
-import Layout from "./../layout/Layout";
 import styles from "../styles/Website.module.css";
 
 export default function Website() {
   const config = { title: "Esta web" };
   const svgList = ["html", "css", "javascript", "react", "next", "node"];
-  const { variableState, setVariableState } = useThemeContext();
+  const { variableState } = useThemeContext();
   const [ theme, setTheme ] = useState()
+  const { configState, setConfigState } = useConfigContext();
 
-  const handleSwitch = (theme) => {
-    setVariableState(theme);
-    setStorageTheme(theme);
-  };
+  useEffect(() => {
+    setConfigState({ ...configState, ...config });
+  }, []);
 
-  useEffect(async () => {
+  useEffect(() => {
     setTheme(variableState || "light-theme");
   }, [variableState]);
 
   return (
-    <Layout config={config} theme={variableState} onSwitch={handleSwitch}>
+    <>
       <Head>
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
@@ -38,6 +38,6 @@ export default function Website() {
           ></img>
         ))}
       </article>
-    </Layout>
+    </>
   );
 }

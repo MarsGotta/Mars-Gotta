@@ -1,17 +1,15 @@
 import Head from "next/head";
-import { useThemeContext, setStorageTheme } from "../core/theme-context";
+import { useEffect } from "react";
 import styles from "../styles/CoursesTalk.module.css";
-
-import Layout from "./../layout/Layout";
+import { useConfigContext } from "../core/config-context";
 
 export default function CoursesTalk() {
   const config = { title: "Charlas y cursos" };
-  const { variableState, setVariableState } = useThemeContext();
+  const { configState, setConfigState } = useConfigContext();
 
-  const handleSwitch = (theme) => {
-    setVariableState(theme);
-    setStorageTheme(theme);
-  };
+  useEffect(() => {
+    setConfigState({ ...configState, ...config });
+  }, []);
 
   const renderVideo = (url) => {
     return (
@@ -26,7 +24,7 @@ export default function CoursesTalk() {
   }
 
   return (
-    <Layout config={config} theme={variableState} onSwitch={handleSwitch}>
+    <>
       <Head>
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
@@ -97,6 +95,6 @@ export default function CoursesTalk() {
           </ul>
         </article>
       </section>
-    </Layout>
+    </>
   );
 }

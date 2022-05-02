@@ -1,4 +1,4 @@
-import React, { useContext, createContext, useEffect } from "react";
+import React, { useState, useContext, createContext, useEffect } from "react";
 
 export const themes = {
   dark: "dark-theme",
@@ -26,7 +26,7 @@ export const ThemeContextProvider = ({ children }) => {
     changeBodyClass(hasThemeStorage);
   }
 
-  const [variableState, setVariableState] = React.useState(hasThemeStorage);
+  const [variableState, setVariableState] = useState(hasThemeStorage);
 
   useEffect(() => {
     setVariableState(getStorageTheme());

@@ -1,17 +1,24 @@
 .header {
   background-color: var(--color-bg-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   z-index: 2;
   position: fixed;
   min-height: 65px;
-  max-width: 1024px;
-  margin: 0 auto;
 }
 
 .logo {
   height: 60px;
   margin-left: 17px;
   padding-top: 8px;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .icon::part(svg) {

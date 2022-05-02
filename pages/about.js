@@ -1,72 +1,21 @@
 import Head from "next/head";
-import { useState } from "react";
-import { useThemeContext, setStorageTheme } from "../core/theme-context";
+import { useState, useEffect } from "react";
+import { useConfigContext } from "../core/config-context";
 
-import Layout from "./../layout/Layout";
+import { SKILLS } from "../core/constants.js"
+
 import MarsProgressBar from "./../components/mars-progress-bar/MarsProgressBar";
 import styles from "../styles/About.module.css";
 
-import MarsGrid from "./../components/mars-grid/MarsGrid";
-
 export default function About() {
   const config = { title: "Sobre mi" };
-  const { variableState, setVariableState } = useThemeContext();
-  const [ moreText, setMoreText ] = useState({presentation: false, skills: false});
-  const SKILLS = [
-    {
-      title: "Javascript",
-      percentage: "95%",
-    },
-    {
-      title: "CSS",
-      percentage: "95%",
-    },
-    {
-      title: "HTML",
-      percentage: "92%",
-    },
-    {
-      title: "WebComponents",
-      percentage: "90%",
-    },
-    {
-      title: "LitElement",
-      percentage: "100%",
-    },
-    {
-      title: "React",
-      percentage: "97%",
-    },
-    {
-      title: "NextJS",
-      percentage: "90%",
-    },
-    {
-      title: "Angular",
-      percentage: "90%",
-    },
-    {
-      title: "Vue",
-      percentage: "95%",
-    },
-    {
-      title: "SASS",
-      percentage: "80%",
-    },
-    {
-      title: "Pug",
-      percentage: "80%",
-    },
-    {
-      title: "NodeJS",
-      percentage: "60%",
-    },
-  ];
+  const { configState, setConfigState } = useConfigContext();
 
-  const handleSwitch = (theme) => {
-    setVariableState(theme);
-    setStorageTheme(theme);
-  };
+  const [ moreText, setMoreText ] = useState({presentation: false, skills: false});
+
+  useEffect(() => {
+    setConfigState({ ...configState, ...config });
+  }, []);
 
   const handleMoreText = (type) => {
     setMoreText({ ...moreText, [type]: !moreText[type]});
@@ -104,7 +53,7 @@ export default function About() {
   };
 
   return (
-    <Layout config={config} theme={variableState} onSwitch={handleSwitch}>
+    <>
       <Head>
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
@@ -136,6 +85,6 @@ export default function About() {
           </span>
         </article>
       </section>
-    </Layout>
+    </>
   );
 }

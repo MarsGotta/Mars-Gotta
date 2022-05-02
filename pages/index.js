@@ -2,25 +2,18 @@ import Head from "next/head";
 
 import {
   useThemeContext,
-  setStorageTheme,
   themes,
 } from "../core/theme-context";
 
 import styles from "../styles/Home.module.css";
-import Layout from "../layout/Layout.jsx";
 import MarsButton from "../components/mars-button/MarsButton.jsx";
 import MarsStars from "../components/mars-stars/MarsStars";
 
 export default function Home() {
-  const { variableState, setVariableState } = useThemeContext();
-
-  const handleSwitch = (theme) => {
-    setVariableState(theme);
-    setStorageTheme(theme);
-  };
+  const { variableState } = useThemeContext();
 
   return (
-    <Layout landing theme={variableState} onSwitch={handleSwitch}>
+    <>
       <div className={styles["container"]}>
         <Head>
           <title>Inicio | Mars Gotta</title>
@@ -50,6 +43,6 @@ export default function Home() {
           <MarsStars limit={10} className={styles["stars"]} />
         )}
       </div>
-    </Layout>
+    </>
   );
 }

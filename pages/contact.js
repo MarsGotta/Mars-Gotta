@@ -1,21 +1,19 @@
 import Head from "next/head";
-import { useState } from "react";
-import { useThemeContext, setStorageTheme } from "../core/theme-context";
+import { useState, useEffect } from "react";
+import { useConfigContext } from "../core/config-context";
 
 import styles from "../styles/Contact.module.css";
-import Layout from "./../layout/Layout";
 import MarsInput from "../components/mars-input/MarsInput";
 import MarsTextarea from "../components/mars-textarea/MarsTextarea";
 import MarsButton from "../components/mars-button/MarsButton";
 
 export default function Contact() {
   const config = { title: "Contacto" };
-  const { variableState, setVariableState } = useThemeContext();
+  const { configState, setConfigState } = useConfigContext();
 
-  const handleSwitch = (theme) => {
-    setVariableState(theme);
-    setStorageTheme(theme);
-  };
+  useEffect(() => {
+    setConfigState({ ...configState, ...config });
+  }, []);
 
   const [state, setState] = useState({
     name: "",
@@ -99,7 +97,7 @@ export default function Contact() {
   };
 
   return (
-    <Layout config={config} theme={variableState} onSwitch={handleSwitch}>
+    <>
       <Head>
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
@@ -163,6 +161,6 @@ export default function Contact() {
           <img src="/astronauta-contact.png" alt="contact-info" />
         </article>
       </div>
-    </Layout>
+    </>
   );
 }
