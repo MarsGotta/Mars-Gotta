@@ -1,3 +1,8 @@
+.container {
+    max-width: 1024px;
+    padding: 0 20px;
+}
+
 .website-text {
     font-size: 1.3rem;
     margin: 15px 0px;

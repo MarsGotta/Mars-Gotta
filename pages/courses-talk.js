@@ -29,7 +29,7 @@ export default function CoursesTalk() {
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section>
+      <section className={styles['container']}>
         <h2 className={styles["principal-title"]}>Charlas</h2>
         <div className={styles["talk-box"]}>
           <article className={styles["talk-element"]}>
@@ -65,16 +65,16 @@ export default function CoursesTalk() {
           </article>
         </div>
       </section>
-      <section>
+      <section className={styles['container']}>
         <h2 className={styles["principal-title"]}>Cursos</h2>
         <p className={styles["course-description"]}>A lo largo de mi carrera como profesional he tenido la oportunidad de impartir varios cursos de diferentes tecnologías Frontend.</p>
-        <article>
+        <article className={styles['courses-list']}>
           <h3 className={styles["course-title"]}>Codemotion</h3>
           <ul className={styles["course-description"]}>
             <li><a href="https://talks.codemotion.com/introduccin?playlist=web-component-desde-0" target="_blank">Web Components desde 0 - Edu Path - 2022, Online</a></li>
           </ul>
         </article>
-        <article>
+        <article className={styles['courses-list']}>
           <h3 className={styles["course-title"]}>Fictizia</h3>
           <ul className={styles["course-description"]}>
             <li>Curso y consultoría de Vue.js - 2019, Madrid</li>
@@ -85,7 +85,7 @@ export default function CoursesTalk() {
             <li>Curso de Angular con RxJS - 2021, Online</li>
           </ul>
         </article>
-        <article>
+        <article className={styles['courses-list']}>
           <h3 className={styles["course-title"]}>Learn InMars</h3>
           <ul className={styles["course-description"]}>
             <li>Curso superior en HTML, CSS, Javascript y VueJS con Vuex</li>

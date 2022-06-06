@@ -27,21 +27,19 @@ const Layout = ({
 
 	const renderSubHeader = (landing, { title }) => {
 		if(landing) return;
-		return <MarsSubHeader title={title} />
+		return <MarsSubHeader className={styles['subheader']} title={title} />
 	}
 
   	return (
-		<>
+		<div className={`${styles['layout-container']} ${landing ? styles['landing'] : ''}`}>
 			<MarsHeader changeSwitch={e => changeTheme(e)} theme={theme} />
 			{renderSubHeader(landing, config)}
-			<section className={styles['section']}>
-				<main className={!landing ? styles['landing'] : undefined}>
-					{children}
-				</main>	
-			</section>
+			<main className={styles['main']}>
+				{children}
+			</main>
 			<MarsFooter />
-		</>
-  );
+		</div>
+	);
 };
 
 Layout.defaultProps = {

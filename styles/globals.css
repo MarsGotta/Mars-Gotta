@@ -2,24 +2,34 @@
 
 html,
 body {
+  overflow: hidden;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 300;
   background-color: var(--color-background, #1f1331);
+  height: 100%;
   --color-text-primary: #1f1331;
   --color-bg-secondary: #1f1331;
   --color-divider-primary: #eaeaea;
   --color-primary: #5f3993;
+  --color-primary-200: #BBA3DB;
   --color-primary-400: #2e1b47;
   --color-secondary: #e6362d;
-  --color-tertiary: #e7531e;
   --color-secondary-400: #951f19;
+  --color-tertiary: #e7531e;
   --color-tertiary-400: #a54522;
+  --color-quaternary: #F29408;
 }
 
-html, body.light-theme {
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+  position: absolute;
+}
+
+html.light-theme, html.light-theme body {
   background-color: white;
   --color-background: white;
   --color-text-primary: #1f1331;
@@ -36,7 +46,7 @@ a {
   box-sizing: border-box;
 }
 
-body.dark-theme {
+html.dark-theme, html.dark-theme body {
   --color-background: #1f1331;
   --color-bg-secondary: #1f1331;
   --color-text-primary: #ccd1d7;
@@ -50,4 +60,14 @@ body.dark-theme {
 
 .sc-dNLxif {
   background-color: var(--color-background-loading, var(--color-tertiary)) !important;
+}
+
+#__next {
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 }

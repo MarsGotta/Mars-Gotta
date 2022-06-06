@@ -102,7 +102,7 @@ export default function Contact() {
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div role="presentation" className={styles["form-info"]}>
+      <section className={styles["form-info"]}>
         <form role="form" className={styles["form-box"]} onSubmit={handlePress}>
           <p class={styles["contact-message"]}>
             ¡Hola! Si me quieres hacer una pregunta o contactar conmigo, rellena
@@ -160,7 +160,7 @@ export default function Contact() {
         <article>
           <img src="/astronauta-contact.png" alt="contact-info" />
         </article>
-      </div>
+      </section>
     </>
   );
 }

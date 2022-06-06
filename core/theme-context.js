@@ -9,13 +9,18 @@ export const themes = {
 export const ThemeContext = createContext(themes.light);
 
 function changeBodyClass(variableState) {
+  const htmlClass = document.querySelector('html').classList;
+
   if (variableState === themes.dark) {
-    document.body.classList.add(themes.dark);
-    document.body.classList.remove(themes.light);
+    addRemove(htmlClass, themes.dark, themes.light);
   } else {
-    document.body.classList.add(themes.light);
-    document.body.classList.remove(themes.dark);
+    addRemove(htmlClass, themes.light, themes.dark);
   }
+}
+
+function addRemove(element, add, remove) {
+  element.add(add);
+  element.remove(remove);
 }
 
 //Provider

@@ -58,7 +58,7 @@ export default function About() {
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section>
+      <section className={styles["section-about"]}>
         <article className={styles["presentation"]}>
           <h3>Presentación</h3>
           <img className={styles["about-image"]} src="about-me.svg"></img>

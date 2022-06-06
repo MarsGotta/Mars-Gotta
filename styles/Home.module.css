@@ -1,22 +1,36 @@
 .container {
-  min-height: calc(100vh - 108px);
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  width: 100%;
+  overflow: overlay;
+  scroll-behavior: smooth;
+  height: 100vh;
 }
 
-.main {
-  margin-top: 65px;
-  max-width: 720px;
+.container::-webkit-scrollbar-thumb {
+  background-color: rgba(90, 90, 90, .5);
+  opacity: .5;
+  border-radius: 10px;
+}
+
+
+.container section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 1.2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   z-index: 1;
+}
+
+.sobre-mi, .contacto {
+  background-color: #170E25;
+}
+
+.mi-trabajo {
+  background-color: #1F1331;
 }
 
 .title a {
@@ -33,34 +47,36 @@
 .title {
   color: var(--color-text-primary);
   margin: 0;
-  line-height: 1.6;
-  font-size: 2.9rem;
+  font-size: 3.1rem;
   font-weight: 300;
 }
 
 .subtitle {
-  color: var(--color-text-primary);
+  color: var(--color-tertiary);
   margin: 0;
-  line-height: 1.15;
-  font-size: 2rem;
+  font-size: 3.1rem;
   font-weight: 300;
 }
 
-.red {
+.red, .span-red {
   color: var(--color-secondary);
 }
 
-.title,
-.description,
-.subtitle {
+.span-red {
+  font-weight: 700;
+}
+
+.description {
   text-align: center;
 }
 
 .description {
-  line-height: 1.5;
+  line-height: 1.4;
   font-size: 1.4rem;
   color: var(--color-text-primary);
-  font-weight: 300;
+  font-weight: 200;
+  max-width: 720px;
+  margin: 0;
 }
 
 .code {
@@ -91,11 +107,44 @@
 
 .button-box {
   display: flex;
+  margin-top: 20px;
+}
+
+.second-title {
+  font-weight: 200;
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.sobre-mi {
+  color: var(--color-primary-200);
+} 
+
+.sobre-mi img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.mi-trabajo h2 {
+  color: var(--color-tertiary);
+}
+
+.contacto h2 {
+  color: var(--color-quaternary);
+}
+
+.contacto .button-box mars-button {
+  margin: 0;
 }
 
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .title {
+    width: 100%;
   }
 }

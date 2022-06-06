@@ -1,11 +1,41 @@
-.landing { 
-    padding: 0 15px;
+.main {
     color: var(--color-text-primary);
-    font-weight: 300;
-    min-height: calc(100vh - 308px);
+    margin: auto;
+    grid-area: content;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.section {
-    max-width: 1024px;
-    margin: auto;
+.main section {
+    width: 100%;
+}
+
+.layout-container {
+    display: grid;
+    grid-template: 'header' auto 'subheader' auto 'content' 1fr 'footer' 104px;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.layout-container.landing {
+    grid-template: 'header' auto 'subheader' auto 'content' 1fr 'footer' auto;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.layout-container footer {
+    grid-area: footer;
+}
+
+.layout-container header {
+    grid-area: header;
+}
+
+.subheader {
+    grid-area: subheader;
 }

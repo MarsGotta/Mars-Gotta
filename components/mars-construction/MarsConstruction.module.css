@@ -1,6 +1,8 @@
 .construction-box {
     display: flex;
     flex-direction: column;
+    max-width: 1024px;
+    padding: 0 20px;
 }
 
 .construction-title {

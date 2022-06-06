@@ -21,7 +21,7 @@ export default function Website() {
   }, [variableState]);
 
   return (
-    <>
+    <section className={styles["container"]}>
       <Head>
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
@@ -38,6 +38,6 @@ export default function Website() {
           ></img>
         ))}
       </article>
-    </>
+    </section>
   );
 }

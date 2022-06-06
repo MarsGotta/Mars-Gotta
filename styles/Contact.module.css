@@ -1,3 +1,12 @@
+.form-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1024px;
+  padding: 0 20px;
+}
+
 .validate-span {
   color: var(--color-secondary);
 }
@@ -36,7 +45,7 @@
 }
 
 .input {
-  margin: 15px;
+  margin: 15px 0;
   width: 100%;
 }
 
@@ -45,7 +54,7 @@
 }
 
 .contact-message {
-  margin: 15px;
+  margin: 15px 0;
   font-size: 1.1rem;
 }
 
@@ -59,13 +68,6 @@
 .form-box h3 {
   width: 100%;
   padding: 0 20px;
-}
-
-.form-info {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 @media (max-width: 780px) {
