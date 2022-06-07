@@ -3,9 +3,10 @@ import styles from './MarsFooter.module.css';
 import MarsSocial from '../mars-social/MarsSocial'
 
 const MarsFooter = ({
+  fixed
 }) => {
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${fixed ? styles.fixed : ''}`}>
       <MarsSocial />
       <a
         href="https://marsgotta.com"

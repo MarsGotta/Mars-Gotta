@@ -2,7 +2,7 @@
   width: 100%;
   overflow: overlay;
   scroll-behavior: smooth;
-  height: 100vh;
+  height: calc(100vh - 67px);
 }
 
 .container::-webkit-scrollbar-thumb {
@@ -23,6 +23,10 @@
   align-items: center;
   position: relative;
   z-index: 1;
+}
+
+.container section.main {
+  min-height: 100%;
 }
 
 .sobre-mi, .contacto {
@@ -121,7 +125,7 @@
   color: var(--color-text-home-about-me);
 } 
 
-.sobre-mi img {
+.image {
   width: 150px;
   margin-bottom: 15px;
 }

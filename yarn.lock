@@ -203,6 +203,14 @@
     command-line-args "^5.0.0"
     command-line-usage "^6.0.0"
 
+"@web-inmars/mars-awesome-regular@^0.2.0":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@web-inmars/mars-awesome-regular/-/mars-awesome-regular-0.2.1.tgz#7ae47b0773324e1870beacbf8791ad262303d92d"
+  integrity sha512-qIEMkQ4OIJRzBPeIfgbVJ2qjuWvOkh9/+WDFBN5XoOS4iVbNu2MmJlMA4qbXZyE4lGBr4oCqxIVSwzCyM4w5Cw==
+  dependencies:
+    command-line-args "^5.0.0"
+    command-line-usage "^6.0.0"
+
 "@web-inmars/mars-awesome-solid@^0.2.0":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@web-inmars/mars-awesome-solid/-/mars-awesome-solid-0.2.1.tgz#7b2a72f8e0945b3e077af7fc7e731ae81889ccec"

@@ -9,6 +9,7 @@
   "dependencies": {
     "@web-inmars/mars-awesome-brands": "^0.2.0",
     "@web-inmars/mars-awesome-solid": "^0.2.0",
+    "@web-inmars/mars-awesome-regular": "^0.2.0",
     "@web-inmars/mars-button": "^0.1.0",
     "@web-inmars/mars-grid": "^0.1.0",
     "@web-inmars/mars-icon": "^0.1.0",

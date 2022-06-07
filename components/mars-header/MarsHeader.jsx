@@ -43,7 +43,7 @@ const MarsHeader = ({
   const selectIconName = () => switchChecked ? 'moon' : 'sun';
 
   return (
-    <header className={styles['header']}>
+    <header className={`${styles['header']} ${isExpanded ? styles['full-width'] : ''}`}>
       <div className={styles['header-content']}>
         <MarsLogo className={styles['logo']} />
         <span className={styles['right-box']}>

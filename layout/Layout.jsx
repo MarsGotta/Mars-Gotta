@@ -37,7 +37,7 @@ const Layout = ({
 			<main className={styles['main']}>
 				{children}
 			</main>
-			<MarsFooter />
+			<MarsFooter fixed={landing}/>
 		</div>
 	);
 };

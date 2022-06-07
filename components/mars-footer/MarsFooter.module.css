@@ -8,6 +8,9 @@
   font-weight: 300;
   padding-bottom: 20px;
   z-index: 2;
+}
+
+.fixed {
   position: fixed;
   bottom: 0;
 }

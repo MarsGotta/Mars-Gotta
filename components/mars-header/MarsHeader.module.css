@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: calc(100% - 10px);
+  width: 100%;
   z-index: 3;
   position: fixed;
   min-height: 65px;
@@ -45,10 +45,4 @@
 
 .icon-switch::part(svg) {
   fill: #f3b7b4;
-}
-
-@media (max-width: 600px) {
-  .header {
-    width: 100%;
-  }
 }

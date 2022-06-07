@@ -32,6 +32,13 @@ body {
   position: absolute;
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: rgba(90, 90, 90, .5);
+  opacity: .5;
+  border-radius: 10px;
+}
+
+
 html.light-theme, html.light-theme body {
   background-color: white;
   --color-background: white;

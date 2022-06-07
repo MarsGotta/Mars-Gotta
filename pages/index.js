@@ -34,7 +34,7 @@ export default function Home() {
           </h2>
         </section>
         <section id="section-2" className={styles["sobre-mi"]}>
-          <img src="/avatar-home.png" alt="Avatar" />
+          <img className={styles["image"]} src="/avatar-home.png" alt="Avatar" />
           <h2 className={styles["second-title"]}>Sobre mi</h2>
           <p className={styles["description"]}>
             Tengo <span className={styles["red"]}>+10 años</span>  de experiencia. Me gusta la física, la programación, escribir, los videojuegos y
