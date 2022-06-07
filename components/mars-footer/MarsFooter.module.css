@@ -8,7 +8,7 @@
   font-weight: 300;
   padding-bottom: 20px;
   z-index: 2;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
