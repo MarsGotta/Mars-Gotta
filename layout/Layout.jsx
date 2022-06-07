@@ -4,10 +4,12 @@ import styles from './Layout.module.css'
 import MarsHeader from '../components/mars-header/MarsHeader';
 import MarsFooter from '../components/mars-footer/MarsFooter';
 import MarsSubHeader from '../components/mars-sub-header/MarsSubHeader';
+import MarsNotification from '../components/mars-notification/MarsNotification';
 import { useThemeContext, setStorageTheme } from "../core/theme-context";
 import { useConfigContext } from "../core/config-context";
 const Layout = ({
   	children,
+	hide,
 	landing,
 }) => {
 	const { variableState, setVariableState } = useThemeContext();
@@ -31,8 +33,9 @@ const Layout = ({
 	}
 
   	return (
-		<div className={`${styles['layout-container']} ${landing ? styles['landing'] : ''}`}>
+		<div className={`${styles['layout-container']} ${landing ? styles['landing'] : ''} ${hide ? styles['hide'] : ''}`}>
 			<MarsHeader changeSwitch={e => changeTheme(e)} theme={theme} />
+			<MarsNotification />
 			{renderSubHeader(landing, config)}
 			<main className={styles['main']}>
 				{children}

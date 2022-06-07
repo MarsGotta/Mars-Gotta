@@ -10,9 +10,13 @@ import "@web-inmars/mars-awesome-brands/dist/src/MarsAwesomeBrands.js";
 
 function MarsApp({ Component, pageProps }) {
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 700);
+    
     const handleStart = (url) => {
       url !== router.pathname ? setLoading(true) : setLoading(false);
     };
@@ -29,15 +33,14 @@ function MarsApp({ Component, pageProps }) {
   return (
     <ThemeContextProvider>
       <ConfigContextProvider>
-        {loading ? (
+        {loading && (
           <div id="loading">
             <WaveTopBottomLoading />
           </div>
-        ) : (
-          <Layout landing={router.pathname === '/'}>
-            <Component {...pageProps} />
-          </Layout>
         )}
+        <Layout landing={router.pathname === '/'} hide={loading}>
+          <Component {...pageProps} />
+        </Layout>
       </ConfigContextProvider>
     </ThemeContextProvider>
   );

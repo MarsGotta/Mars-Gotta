@@ -6,7 +6,7 @@ export const themes = {
 };
 
 //Context
-export const ThemeContext = createContext(themes.light);
+export const ThemeContext = createContext(themes.dark);
 
 function changeBodyClass(variableState) {
   const htmlClass = document.querySelector('html').classList;
@@ -58,7 +58,7 @@ export const setStorageTheme = (theme) => {
 };
 
 export const getStorageTheme = () => {
-  return localStorage.getItem("theme");
+  return localStorage.getItem("theme") || themes.dark;
 };
 
 export function useThemeContext() {
