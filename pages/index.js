@@ -28,10 +28,12 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <section id="section-1" className={styles["main"]}>
-          <h1 className={styles["title"]}>Hey, soy Mars</h1>
-          <h2 className={styles["subtitle"]}>
-            Expert <span className={styles["span-red"]}>Frontend</span> Developer
-          </h2>
+          <div className={styles["main-container"]}>
+            <h1 className={styles["title"]}>Hey, soy Mars</h1>
+            <h2 className={styles["subtitle"]}>
+              Expert <span className={styles["span-red"]}>Frontend</span> Developer
+            </h2>
+          </div>
         </section>
         <section id="section-2" className={styles["sobre-mi"]}>
           <img className={styles["image"]} src="/avatar-home.png" alt="Avatar" />
