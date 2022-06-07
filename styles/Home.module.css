@@ -26,11 +26,11 @@
 }
 
 .sobre-mi, .contacto {
-  background-color: #170E25;
+  background-color: var(--color-bg-home-second);
 }
 
 .mi-trabajo {
-  background-color: #1F1331;
+  background-color: var(--color-bg-home-first);
 }
 
 .title a {
@@ -118,7 +118,7 @@
 }
 
 .sobre-mi {
-  color: var(--color-primary-200);
+  color: var(--color-text-home-about-me);
 } 
 
 .sobre-mi img {

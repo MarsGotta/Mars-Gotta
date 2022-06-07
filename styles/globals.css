@@ -12,6 +12,8 @@ body {
   height: 100%;
   --color-text-primary: #1f1331;
   --color-bg-secondary: #1f1331;
+  --color-bg-home-first: #1f1331;
+  --color-bg-home-second: #170E25;
   --color-divider-primary: #eaeaea;
   --color-primary: #5f3993;
   --color-primary-200: #BBA3DB;
@@ -21,6 +23,7 @@ body {
   --color-tertiary: #e7531e;
   --color-tertiary-400: #a54522;
   --color-quaternary: #F29408;
+  --color-text-home-about-me: var(--color-primary-200);
 }
 
 ::-webkit-scrollbar {
@@ -35,6 +38,9 @@ html.light-theme, html.light-theme body {
   --color-text-primary: #1f1331;
   --color-bg-secondary: #1f1331;
   --color-divider-primary: #eaeaea;
+  --color-bg-home-first: #F9FAFB;
+  --color-bg-home-second: #EBEDEF;
+  --color-text-home-about-me: var(--color-primary-400);
 }
 
 a {
