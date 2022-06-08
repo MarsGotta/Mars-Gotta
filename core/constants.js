@@ -32,19 +32,19 @@ export const menuItems = [
 export const SKILLS = [
     {
       title: "Javascript",
-      percentage: "95%",
+      percentage: "96%",
     },
     {
       title: "CSS",
-      percentage: "95%",
+      percentage: "100%",
     },
     {
       title: "HTML",
-      percentage: "92%",
+      percentage: "100%",
     },
     {
       title: "WebComponents",
-      percentage: "90%",
+      percentage: "95%",
     },
     {
       title: "LitElement",
@@ -56,11 +56,11 @@ export const SKILLS = [
     },
     {
       title: "NextJS",
-      percentage: "90%",
+      percentage: "92%",
     },
     {
       title: "Angular",
-      percentage: "90%",
+      percentage: "95%",
     },
     {
       title: "Vue",

@@ -64,7 +64,7 @@ export default function About() {
           <img className={styles["about-image"]} src="about-me.svg"></img>
           <p className={styles["about-text"]}>
             ¡Hola! Soy Marcela Gotta, soy una ninja en Javascript, especializada en
-            Frontend. Llevo 14 años siendo muy amiga del código.{" "}
+            Frontend. Llevo 16 años siendo muy amiga del código.{" "}
           </p>
           <p className={styles["about-text"]}>
             Desarrollo con todo tipo de framework de Javascript como: ReactJs,
@@ -75,6 +75,7 @@ export default function About() {
             {!moreText.presentation ? 'Leer más' : 'Leer menos'}
           </span>
         </article>
+        <hr />
         <article className={styles["skills"]}>
           <h3>Habilidades</h3>
           <section className={styles["progress-box"]}>

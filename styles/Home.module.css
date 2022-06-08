@@ -86,9 +86,8 @@
 
 .description {
   line-height: 1.4;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--color-text-primary);
-  font-weight: 200;
   max-width: 720px;
   margin: 0;
 }
@@ -125,10 +124,10 @@
 }
 
 .second-title {
-  font-weight: 200;
   font-size: 40px;
   margin: 0;
   margin-bottom: 5px;
+  font-weight: 300;
 }
 
 .sobre-mi {
@@ -168,7 +167,5 @@
 
   .container section.main {
     min-height: 100vh;
-    min-height: fill-available;
-    min-height: -webkit-fill-available;
   }
 }

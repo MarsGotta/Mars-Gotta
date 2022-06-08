@@ -1,17 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 html,
 body {
   overflow: hidden;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   background-color: var(--color-background, #1f1331);
   height: 100%;
-  min-height: fill-available;
-  min-height: -webkit-fill-available;
   --color-text-primary: #170E25;
   --color-bg-secondary: #1f1331;
   --color-bg-home-first: #1f1331;
@@ -26,7 +22,10 @@ body {
   --color-tertiary: #e7531e;
   --color-tertiary-400: #a54522;
   --color-quaternary: #F29408;
+  --border-color: #5F3993;
   --color-text-home-about-me: var(--color-primary-200);
+  --about-color-h3: #E0E3E6;
+  --progress-bar-color-title: #E0E3E6;
 }
 
 ::-webkit-scrollbar {
@@ -40,6 +39,11 @@ body {
   border-radius: 100px;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-color);
+}
 
 html.light-theme, html.light-theme body {
   background-color: white;
@@ -49,7 +53,10 @@ html.light-theme, html.light-theme body {
   --color-divider-primary: #eaeaea;
   --color-bg-home-first: #F9FAFB;
   --color-bg-home-second: #EBEDEF;
+  --border-color: #CCD1D7;
   --color-text-home-about-me: var(--color-primary-400);
+  --about-color-h3: #E7531E;
+  --progress-bar-color-title: #F29408;
 }
 
 a {

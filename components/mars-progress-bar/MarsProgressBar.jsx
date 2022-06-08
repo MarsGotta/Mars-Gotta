@@ -8,8 +8,8 @@ const MarsCard = ({
     className
 }) => {
   return (
-    <div className={className}>
-        {title && <h4>{title}</h4>}
+    <section className={className}>
+        {title && <h4 className={styles['title']}>{title}</h4>}
         {percentage && <span className={styles["outer"]}>
             <span
                 className={styles["inner"]}
@@ -18,7 +18,7 @@ const MarsCard = ({
                 }}
             />
         </span>}
-    </div>
+    </section>
   );
 };
 

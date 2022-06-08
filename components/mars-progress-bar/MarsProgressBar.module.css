@@ -13,7 +13,11 @@
     height: 100%;
     width: 250px;
     background: var(--color-tertiary);
-    opacity: 0.8;
     border-radius: 25px;
     transition: width 100ms ease-out;
+  }
+
+  .title {
+    color: var(--progress-bar-color-title);
+    font-weight: 500;
   }
