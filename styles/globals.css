@@ -10,6 +10,8 @@ body {
   font-weight: 300;
   background-color: var(--color-background, #1f1331);
   height: 100%;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
   --color-text-primary: #170E25;
   --color-bg-secondary: #1f1331;
   --color-bg-home-first: #1f1331;
