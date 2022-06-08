@@ -47,3 +47,10 @@
 .hide {
     display: none;
 }
+
+@media (max-width: 600px) {
+    .layout-container.landing {
+        grid-template: 'header' auto 'subheader' auto 'content' 1fr 'footer' auto;
+    }
+  }
+  

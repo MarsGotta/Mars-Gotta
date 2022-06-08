@@ -26,7 +26,7 @@
 }
 
 .container section.main {
-  min-height: calc(100vh - 67px);
+  min-height: 100%;
 }
 
 .main-container {
@@ -161,6 +161,5 @@
 
   .title {
     width: 100%;
-    margin-top: -67px;
   }
 }
