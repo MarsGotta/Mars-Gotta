@@ -18,7 +18,13 @@ function MarsApp({ Component, pageProps }) {
     }, 700);
     
     const handleStart = (url) => {
-      url !== router.pathname ? setLoading(true) : setLoading(false);
+      if(url !== router.pathname) {
+        setLoading(true)
+      } else { 
+        setTimeout(() => {
+          setLoading(false);
+        }, 700);
+       }
     };
     
     const handleComplete = (url) => {

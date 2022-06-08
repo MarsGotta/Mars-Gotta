@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.main section {
+.main > section {
     width: 100%;
 }
 
