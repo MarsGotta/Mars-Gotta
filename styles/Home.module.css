@@ -160,12 +160,4 @@
   .title {
     width: 100%;
   }
-
-  .container {
-    height: 100vh;
-  }
-
-  .container section.main {
-    min-height: 100vh;
-  }
 }
