@@ -10,7 +10,7 @@ body {
   font-weight: 300;
   background-color: var(--color-background, #1f1331);
   height: 100%;
-  --color-text-primary: #1f1331;
+  --color-text-primary: #170E25;
   --color-bg-secondary: #1f1331;
   --color-bg-home-first: #1f1331;
   --color-bg-home-second: #170E25;
@@ -42,7 +42,7 @@ body {
 html.light-theme, html.light-theme body {
   background-color: white;
   --color-background: white;
-  --color-text-primary: #1f1331;
+  --color-text-primary: #170E25;
   --color-bg-secondary: #1f1331;
   --color-divider-primary: #eaeaea;
   --color-bg-home-first: #F9FAFB;
