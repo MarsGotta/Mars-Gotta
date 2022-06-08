@@ -81,6 +81,10 @@ html.dark-theme, html.dark-theme body {
 }
 
 @media (max-width: 600px) {
+  html.light-theme, html.light-theme body {
+    --color-text-primary: #000;
+  }
+
   ::-webkit-scrollbar {
     width: 0;
   }
