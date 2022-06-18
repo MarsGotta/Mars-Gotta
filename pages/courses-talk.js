@@ -71,27 +71,170 @@ export default function CoursesTalk() {
         <article className={styles['courses-list']}>
           <h3 className={styles["course-title"]}>Codemotion</h3>
           <ul className={styles["course-description"]}>
-            <li><a href="https://talks.codemotion.com/introduccin?playlist=web-component-desde-0" target="_blank">Web Components desde 0 - Edu Path - 2022, Online</a></li>
+            <li>
+              <a className={styles["course-list-title"]} href="https://talks.codemotion.com/introduccin?playlist=web-component-desde-0" target="_blank">
+                Web Components desde 0 
+              </a>
+              <span className={styles["course-type"]}>
+                Edu Path
+              </span>
+              <span className={styles["course-place"]}>
+                Online
+              </span>
+              <span className={styles["course-year"]}>
+                2022
+              </span>
+            </li>
           </ul>
         </article>
         <article className={styles['courses-list']}>
           <h3 className={styles["course-title"]}>Fictizia</h3>
           <ul className={styles["course-description"]}>
-            <li>Curso y consultoría de Vue.js - 2019, Madrid</li>
-            <li>Curso de Vue con Vuex - 2019, Madrid</li>
-            <li>Curso de React Avanzado - 2019, Online</li>
-            <li>Curso de Angular - 2020, Online</li>
-            <li>Curso de Profesional React con Redux - 2020, Online</li>
-            <li>Curso de Angular con RxJS - 2021, Online</li>
+            <li>
+              <span className={styles["course-list-title"]}>
+                Vue.js para empresas 
+              </span>
+              <span className={styles["course-type"]}>
+                Curso y consultoría
+              </span>
+              <span className={styles["course-place"]}>
+                Madrid
+              </span>
+              <span className={styles["course-year"]}>
+                2019
+              </span>
+            </li>
+            <li>
+              <span className={styles["course-list-title"]}>
+                Vue con Vuex 
+              </span>
+              <span className={styles["course-type"]}>
+                Curso
+              </span>
+              <span className={styles["course-place"]}>
+                Madrid
+              </span>
+              <span className={styles["course-year"]}>
+                2019
+              </span>
+            </li>
+            <li>
+              <span className={styles["course-list-title"]}>
+                React Avanzado 
+              </span>
+              <span className={styles["course-type"]}>
+                Curso
+              </span>
+              <span className={styles["course-place"]}>
+                Online
+              </span>
+              <span className={styles["course-year"]}>
+                2019
+              </span>
+            </li>
+            <li>
+              <span className={styles["course-list-title"]}>
+                Curso de Angular
+              </span>
+              <span className={styles["course-type"]}>
+                Curso
+              </span>
+              <span className={styles["course-place"]}>
+                Online
+              </span>
+              <span className={styles["course-year"]}>
+                2020
+              </span>
+            </li>
+            <li>
+              <span className={styles["course-list-title"]}>
+                Profesional React con Redux
+              </span>
+              <span className={styles["course-type"]}>
+                Curso
+              </span>
+              <span className={styles["course-place"]}>
+                Online
+              </span>
+              <span className={styles["course-year"]}>
+                2020
+              </span>
+            </li>
+            <li>
+              <span className={styles["course-list-title"]}>
+                Angular con RxJS
+              </span>
+              <span className={styles["course-type"]}>
+                Curso
+              </span>
+              <span className={styles["course-place"]}>
+                Online
+              </span>
+              <span className={styles["course-year"]}>
+                2021
+              </span>
+            </li>
           </ul>
         </article>
         <article className={styles['courses-list']}>
-          <h3 className={styles["course-title"]}>Learn InMars</h3>
+          <h3 className={styles["course-title"]}>InMars</h3>
           <ul className={styles["course-description"]}>
-            <li>Curso superior en HTML, CSS, Javascript y VueJS con Vuex</li>
-            <li>Curso de Angular</li>
-            <li>Curso de Vue con Vuex</li>
-            <li>Curso de React con Redux</li>
+            <li>
+              <span className={styles["course-list-title"]}>
+                HTML, CSS, Javascript y VueJS con Vuex
+              </span>
+              <span className={styles["course-type"]}>
+                Curso superior
+              </span>
+              <span className={styles["course-place"]}>
+                Online
+              </span>
+              <span className={styles["course-year"]}>
+                2021
+              </span>
+            </li>
+            <li>
+              <span className={styles["course-list-title"]}>
+                Curso de Angular
+              </span>
+              <span className={styles["course-type"]}>
+                Curso
+              </span>
+              <span className={styles["course-place"]}>
+                Online
+              </span>
+              <span className={styles["course-year"]}>
+                2021
+              </span>
+            </li>
+            <li>
+              <span className={styles["course-list-title"]}>
+                Curso de Vue con Vuex
+              </span>
+              <span className={styles["course-type"]}>
+                Curso
+              </span>
+              <span className={styles["course-place"]}>
+                Online
+              </span>
+              <span className={styles["course-year"]}>
+                2021
+              </span>
+            </li>
+            <li>
+              <span className={styles["course-list-title"]}>
+                Curso de React con Redux
+              </span>
+              <span className={styles["course-type"]}>
+                Curso
+              </span>
+              <span className={styles["course-place"]}>
+                Online
+              </span>
+              <span className={styles["course-year"]}>
+                2021
+              </span>
+            </li>
           </ul>
         </article>
       </section>
