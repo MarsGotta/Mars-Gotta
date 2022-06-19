@@ -3,12 +3,16 @@ import { useState, useEffect } from "react";
 import { useConfigContext } from "../core/config-context";
 
 import styles from "../styles/Contact.module.css";
+import locales from "../locales/contact.i18n.js";
+
 import MarsInput from "../components/mars-input/MarsInput";
 import MarsTextarea from "../components/mars-textarea/MarsTextarea";
 import MarsButton from "../components/mars-button/MarsButton";
 
-export default function Contact() {
-  const config = { title: "Contacto" };
+export default function Contact(props) {
+  const { locale } = props;
+  const i18n = locales[locale];
+  const config = { title: i18n.headTitle }
   const { configState, setConfigState } = useConfigContext();
 
   useEffect(() => {
@@ -99,17 +103,16 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>{config.title} | Mars Gotta</title>
+        <title>{ i18n.headTitle } | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles["form-info"]}>
         <form role="form" className={styles["form-box"]} onSubmit={handlePress}>
-          <p class={styles["contact-message"]}>
-            ¡Hola! Si me quieres hacer una pregunta o contactar conmigo, rellena
-            siguiente el formulario.
+          <p className={styles["contact-message"]}>
+            { i18n.description }
           </p>
           <MarsInput
-            placeholder="Nombre"
+            placeholder={ i18n.inputName }
             name="name"
             onChange={handleChange}
             onEnter={handlePress}
@@ -117,7 +120,7 @@ export default function Contact() {
             value={state.name}
           />
           <MarsInput
-            placeholder="E-mail"
+            placeholder={ i18n.inputEmail }
             name="email"
             onChange={handleChange}
             onEnter={handlePress}
@@ -125,7 +128,7 @@ export default function Contact() {
             value={state.email}
           />
           <MarsInput
-            placeholder="Asunto"
+            placeholder={ i18n.inputSubject }
             name="subject"
             onChange={handleChange}
             onEnter={handlePress}
@@ -133,7 +136,7 @@ export default function Contact() {
             value={state.subject}
           />
           <MarsTextarea
-            placeholder="Mensaje"
+            placeholder={ i18n.inputMessage }
             name="message"
             onChange={handleChange}
             className={`${validateInput("message")} ${styles["input"]}`}
@@ -142,17 +145,17 @@ export default function Contact() {
 
           <div className={styles["validate-box"]} role="presentation">
             <MarsButton onClick={handlePress} className={styles["button-send"]}>
-              Enviar
+              { i18n.buttonSend }
             </MarsButton>
             {!isValid.all && (
               <span className={styles["validate-span"]}>
-                Rellena todos los campos.
+                { i18n.validateMessage }
               </span>
             )}
 
             {isSended && (
               <span className={styles["sended-span"]}>
-                Formulario enviado! :). Pronto me pondré en contacto contigo.
+                { i18n.sendedMessage }
               </span>
             )}
           </div>

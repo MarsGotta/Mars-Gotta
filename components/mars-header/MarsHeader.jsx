@@ -4,11 +4,11 @@ import styles from './MarsHeader.module.css'
 import MarsMenu from '../mars-menu/MarsMenu'
 import MarsLogo from '../mars-logo/MarsLogo'
 import MarsIcon from '../mars-icon/MarsIcon.jsx'
-import { menuItems } from '../../core/constants.js';
 
 const MarsHeader = ({
   changeSwitch,
   theme,
+  items
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isFirst, setIsFirst] = useState(true);
@@ -52,7 +52,7 @@ const MarsHeader = ({
           </mars-switch>
           <MarsIcon className={styles['icon']} name="bars" type="solid" onClick={handleToggle} />
         </span>
-        <MarsMenu items={menuItems} isExpanded={isExpanded} onClick={handleClick} />
+        <MarsMenu items={items} isExpanded={isExpanded} onClick={handleClick} />
       </div>
     </header>
   );

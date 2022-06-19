@@ -1,10 +1,15 @@
 import Head from "next/head";
 import { useEffect } from "react";
 import { useConfigContext } from "../core/config-context";
+
+import locales from "../locales/own-projects.i18n.js";
+
 import MarsConstruction from "../components/mars-construction/MarsConstruction";
 
-export default function OwnProjects() {
-  const config = { title: "Mis proyectos" };
+export default function OwnProjects(props) {
+  const { locale } = props;
+  const i18n = locales[locale];
+  const config = { title: i18n.headTitle };
   const { configState, setConfigState } = useConfigContext();
 
   useEffect(() => {
@@ -17,7 +22,7 @@ export default function OwnProjects() {
         <title>{config.title} | Mars Gotta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MarsConstruction />
+      <MarsConstruction title={ i18n.title } description={ i18n.description } />
     </>
   );
 }

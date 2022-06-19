@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import { themes } from '../core/theme-context';
 import styles from './Layout.module.css'
+
+import locales from "./Layout.i18n.js";
+
 import MarsHeader from '../components/mars-header/MarsHeader';
 import MarsFooter from '../components/mars-footer/MarsFooter';
 import MarsSubHeader from '../components/mars-sub-header/MarsSubHeader';
@@ -11,7 +14,9 @@ const Layout = ({
   	children,
 	hide,
 	landing,
+	locale,
 }) => {
+	const i18n = locales[locale];
 	const { variableState, setVariableState } = useThemeContext();
 	const { configState } = useConfigContext();
 	const config = configState;
@@ -34,8 +39,11 @@ const Layout = ({
 
   	return (
 		<div className={`${styles['layout-container']} ${landing ? styles['landing'] : ''} ${hide ? styles['hide'] : ''}`}>
-			<MarsHeader changeSwitch={e => changeTheme(e)} theme={theme} />
-			<MarsNotification />
+			<MarsHeader items={ i18n.menuItems } changeSwitch={e => changeTheme(e)} theme={theme} />
+			<MarsNotification>
+				<p>{ i18n.notificationDescription[0] }</p>
+				<p>{ i18n.notificationDescription[1] }</p>
+			</MarsNotification>
 			{renderSubHeader(landing, config)}
 			<main className={styles['main']}>
 				{children}

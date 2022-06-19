@@ -2,17 +2,19 @@
     display: flex;
     flex-direction: column;
     max-width: 1024px;
-    padding: 0 20px;
+    padding: 20px;
+    font-size: 20px;
 }
 
 .construction-title {
-    margin: 15px 0;
+    font-weight: 500;
+    margin: 0;
 }
 
 .construction-text {
     font-size: 1.2rem;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .construction-img {

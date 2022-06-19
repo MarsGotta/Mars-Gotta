@@ -12,6 +12,11 @@ function MarsApp({ Component, pageProps }) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
 
+  const props = {
+    ...pageProps,
+    locale: router.locale,
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -44,8 +49,8 @@ function MarsApp({ Component, pageProps }) {
             <WaveTopBottomLoading />
           </div>
         )}
-        <Layout landing={router.pathname === '/'} hide={loading}>
-          <Component {...pageProps} />
+        <Layout landing={router.pathname === '/'} hide={loading} locale={router.locale}>
+          <Component {...props} />
         </Layout>
       </ConfigContextProvider>
     </ThemeContextProvider>

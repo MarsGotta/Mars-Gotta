@@ -19,8 +19,7 @@ const MarsNotification = ({
 
   return (
       <section className={styles['box-notification']}>
-        <p>Esta página sigue en construcción.</p>
-        <p>¡Cuidado dónde pisas!</p>
+        { children }
       </section>
   );
 };
