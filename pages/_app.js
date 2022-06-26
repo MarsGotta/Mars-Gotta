@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { ThemeContextProvider } from "../core/theme-context";
 import { ConfigContextProvider } from "../core/config-context";
 import { useRouter } from "next/router";
@@ -5,8 +6,6 @@ import React, { useEffect, useState } from "react";
 import { WaveTopBottomLoading } from "react-loadingg";
 import Layout from "./../layout/Layout";
 import "../styles/globals.css";
-import "@web-inmars/mars-awesome-solid/dist/src/MarsAwesomeSolid.js";
-import "@web-inmars/mars-awesome-brands/dist/src/MarsAwesomeBrands.js";
 
 function MarsApp({ Component, pageProps }) {
   const router = useRouter();
@@ -20,15 +19,13 @@ function MarsApp({ Component, pageProps }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 700);
+    }, 200);
     
     const handleStart = (url) => {
       if(url !== router.pathname) {
         setLoading(true)
       } else { 
-        setTimeout(() => {
-          setLoading(false);
-        }, 700);
+        setLoading(false);
        }
     };
     
@@ -42,18 +39,26 @@ function MarsApp({ Component, pageProps }) {
   }, [router]);
 
   return (
-    <ThemeContextProvider>
-      <ConfigContextProvider>
-        {loading && (
-          <div id="loading">
-            <WaveTopBottomLoading />
-          </div>
-        )}
-        <Layout landing={router.pathname === '/'} hide={loading} locale={router.locale}>
-          <Component {...props} />
-        </Layout>
-      </ConfigContextProvider>
-    </ThemeContextProvider>
+    <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" />
+      </Head>
+      <ThemeContextProvider>
+        <ConfigContextProvider>
+          {loading && (
+            <div id="loading">
+              <WaveTopBottomLoading />
+            </div>
+          )}
+          <Layout landing={router.pathname === '/'} hide={loading} locale={router.locale}>
+            <Component {...props} />
+          </Layout>
+        </ConfigContextProvider>
+      </ThemeContextProvider>
+    </>
   );
 }
 

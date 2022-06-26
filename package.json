@@ -2,20 +2,21 @@
   "name": "mars-gotta",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "@web-inmars/mars-awesome-brands": "^0.2.0",
-    "@web-inmars/mars-awesome-solid": "^0.2.0",
     "@web-inmars/mars-awesome-regular": "^0.2.0",
+    "@web-inmars/mars-awesome-solid": "^0.2.0",
     "@web-inmars/mars-button": "^0.1.0",
     "@web-inmars/mars-grid": "^0.1.0",
     "@web-inmars/mars-icon": "^0.1.0",
     "@web-inmars/mars-switch": "^0.1.0",
     "@web-inmars/mars-textarea": "^0.1.0",
     "@web-inmars/mars-textfield": "^0.1.0",
+    "express": "^4.18.1",
     "next": "12",
     "react": "^18.1.0",
     "react-content-loader": "^6.0.3",

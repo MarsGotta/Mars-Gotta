@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from 'next/image';
 import { useEffect, useState }  from 'react';
 import { useThemeContext } from "../core/theme-context";
 import { useConfigContext } from "../core/config-context";
@@ -12,7 +13,7 @@ export default function Website(props) {
   const config = { title: i18n.headTitle }
   const svgList = ["html", "css", "javascript", "react", "next", "node"];
   const { variableState } = useThemeContext();
-  const [ theme, setTheme ] = useState()
+  const [ theme, setTheme ] = useState('dark-theme')
   const { configState, setConfigState } = useConfigContext();
 
   useEffect(() => {
@@ -34,11 +35,14 @@ export default function Website(props) {
       </p>
       <article className={styles["image-box"]}>
         {svgList.map((name, key) => (
-          <img
-            key={key}
-            className={styles["website-image"]}
-            src={`${name}-${theme}.png`}
-          ></img>
+          <figure className={styles["website-image"]}>
+            <Image
+              key={key}
+              src={`/${name}-${theme}.png`}
+              width="250"
+              height="250"
+            />
+          </figure>
         ))}
       </article>
     </section>

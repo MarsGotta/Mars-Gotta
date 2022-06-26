@@ -1,6 +1,7 @@
 export default {
     es: {
         headTitle: "Sobre mi",
+        image: "Imagen sobre mi",
         titleAbout: "Presentación",
         description: [
             "¡Hola! Soy Marcela Gotta, soy una ninja en Javascript, especializada en Frontend. Llevo 16 años siendo muy amiga del código.",
@@ -14,6 +15,7 @@ export default {
     },
     en: {
         headTitle: "Sobre mi",
+        image: "Imagen sobre mi",
         titleAbout: "Presentación",
         description: [
             "¡Hola! Soy Marcela Gotta, soy una ninja en Javascript, especializada en Frontend. Llevo 16 años siendo muy amiga del código.",

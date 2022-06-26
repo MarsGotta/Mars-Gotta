@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './MarsIcon.module.css';
+import * as IconCollection from './IconCollection.jsx'
 
 const MarsIcon = ({
   name,
@@ -14,12 +15,6 @@ const MarsIcon = ({
   variant,
   slot
 }) => {
-  useEffect(() => {    
-    setTimeout(() => {
-      import("@web-inmars/mars-icon/dist/mars-icon");
-    }, 200)
-  });
-
   const onClick = () => {
     if (isDisabled) return;
     if(href) window?.open(href, '_ blank')
@@ -29,9 +24,7 @@ const MarsIcon = ({
 
   const completeClassName = `${isDisabled ? styles['disabled'] : ''} ${href ? styles['href'] : ''} ${className}`;
 
-  return (
-    <mars-icon class={completeClassName} name={name} type={type} width={size} height={size} variant={variant} onClick={onClick} slot={slot} />
-  );
+  return IconCollection[name]({ className: completeClassName, size, onClick, href, slot });
 };
 
 MarsIcon.defaultProps = {

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from 'next/image';
 import { useState, useEffect } from "react";
 import { useConfigContext } from "../core/config-context";
 
@@ -8,6 +9,8 @@ import locales from "../locales/contact.i18n.js";
 import MarsInput from "../components/mars-input/MarsInput";
 import MarsTextarea from "../components/mars-textarea/MarsTextarea";
 import MarsButton from "../components/mars-button/MarsButton";
+
+import ContactImage from '../public/astronauta-contact.png'
 
 export default function Contact(props) {
   const { locale } = props;
@@ -161,7 +164,7 @@ export default function Contact(props) {
           </div>
         </form>
         <article>
-          <img src="/astronauta-contact.png" alt="contact-info" />
+          <Image src={ContactImage} alt="contact-info" />
         </article>
       </section>
     </>

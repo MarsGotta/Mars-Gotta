@@ -9,12 +9,12 @@
   cursor: pointer;
 }
 
-.social-icon.primary::part(svg),
-.social-icon.secondary::part(svg):hover {
+.social-icon.primary,
+.social-icon.secondary:hover {
   fill: var(--color-primary-600);
 }
 
-.social-icon.secondary::part(svg),
-.social-icon.primary::part(svg):hover {
-  fill: var(--color-secondary-500);
+.social-icon.secondary,
+.social-icon.primary:hover {
+  fill: var(--color-secondary);
 }

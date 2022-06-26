@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from 'next/image';
 import { useState, useEffect } from "react";
 import { useConfigContext } from "../core/config-context";
 
@@ -7,6 +8,9 @@ import locales from "../locales/about.i18n.js";
 
 import MarsProgressBar from "./../components/mars-progress-bar/MarsProgressBar";
 import styles from "../styles/About.module.css";
+
+import AboutMe from '../public/about-me.svg'
+
 
 export default function About(props) {
   const { locale } = props;
@@ -55,7 +59,9 @@ export default function About(props) {
       <section className={styles["section-about"]}>
         <article className={styles["presentation"]}>
           <h3>{ i18n.titleAbout }</h3>
-          <img className={styles["about-image"]} src="about-me.svg"></img>
+          <figure className={styles["about-image"]}>
+            <Image src={AboutMe} alt={ i18n.image } />
+          </figure>
           <p className={styles["about-text"]}>
             { i18n.description[0] }
           </p>

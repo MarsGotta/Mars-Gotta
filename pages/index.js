@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from 'next/image';
 
 import {
   useThemeContext,
@@ -10,6 +11,8 @@ import locales from "../locales/index.i18n.js";
 
 import MarsButton from "../components/mars-button/MarsButton.jsx";
 import MarsStars from "../components/mars-stars/MarsStars";
+import AboutImage from '../public/avatar-home.png';
+
 
 export default function Home(props) {
   const { variableState } = useThemeContext();
@@ -45,7 +48,9 @@ export default function Home(props) {
           </div>
         </section>
         <section id="section-2" className={styles["sobre-mi"]}>
-          <img className={styles["image"]} src="/avatar-home.png" alt="Avatar" />
+          <figure className={styles["image"]}>
+            <Image src={AboutImage} alt="Avatar" />
+          </figure>
           <h2 className={styles["second-title"]}>
             { i18n.about.secondTitle }
           </h2>

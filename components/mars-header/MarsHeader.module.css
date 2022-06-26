@@ -21,11 +21,11 @@
   margin: 0 auto;
 }
 
-.icon::part(svg) {
-  fill: var(--color-tertiary-500);
+.icon {
+  fill: var(--color-tertiary);
 }
 
-.icon::part(svg):hover {
+.icon:hover {
   fill: var(--color-tertiary-600);
 }
 
@@ -33,6 +33,9 @@
   float: right;
   margin: 20px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .switch {
@@ -43,6 +46,6 @@
   --custom-switch-color-bg-checked-hover: var(--color-secondary-700);
 }
 
-.icon-switch::part(svg) {
+.icon-switch {
   fill: #f3b7b4;
 }

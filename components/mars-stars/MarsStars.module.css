@@ -28,11 +28,11 @@
 }
 
 .stars {
-  background: transparent url(/stars.png) repeat top center;
+  background: transparent url(/stars.webp) repeat top center;
 }
 
 .twinkling{
-  background: transparent url(/twinkling.png) repeat top center;
+  background: transparent url(/twinkling.webp) repeat top center;
 
   -moz-animation: move-twink-back 200s linear infinite;
   -ms-animation: move-twink-back 200s linear infinite;
