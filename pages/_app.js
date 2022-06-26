@@ -3,7 +3,6 @@ import { ThemeContextProvider } from "../core/theme-context";
 import { ConfigContextProvider } from "../core/config-context";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { WaveTopBottomLoading } from "react-loadingg";
 import Layout from "./../layout/Layout";
 import "../styles/globals.css";
 
@@ -39,6 +38,7 @@ function MarsApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta name="description" content="Mars Gotta Portfolio" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
@@ -48,7 +48,7 @@ function MarsApp({ Component, pageProps }) {
         <ConfigContextProvider>
           {loading && (
             <div id="loading">
-              <WaveTopBottomLoading />
+              <span className="loader"></span>
             </div>
           )}
           <Layout landing={router.pathname === '/'} hide={loading} locale={router.locale}>
