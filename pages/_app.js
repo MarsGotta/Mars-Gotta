@@ -17,9 +17,7 @@ function MarsApp({ Component, pageProps }) {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 200);
+    setLoading(false);
     
     const handleStart = (url) => {
       if(url !== router.pathname) {
@@ -43,8 +41,8 @@ function MarsApp({ Component, pageProps }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" />
       </Head>
       <ThemeContextProvider>
         <ConfigContextProvider>

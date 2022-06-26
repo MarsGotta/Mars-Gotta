@@ -76,13 +76,13 @@
   margin-bottom: 60px;
 }
 
-.social mars-icon::part(svg) {
+.social svg {
   fill: transparent !important;
-  stroke: var(--color-tertiary-500);
+  stroke: var(--color-tertiary);
   stroke-width: 15px;
 }
 
-.social mars-icon::part(svg):hover {
-  fill: var(--color-tertiary-500) !important;
+.social svg:hover {
+  fill: var(--color-tertiary) !important;
   stroke-width: 0;
 }

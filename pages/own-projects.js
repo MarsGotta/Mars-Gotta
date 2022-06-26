@@ -20,7 +20,6 @@ export default function OwnProjects(props) {
     <>
       <Head>
         <title>{config.title} | Mars Gotta</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <MarsConstruction title={ i18n.title } description={ i18n.description } />
     </>

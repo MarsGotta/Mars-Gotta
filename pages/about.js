@@ -54,7 +54,6 @@ export default function About(props) {
     <>
       <Head>
         <title>{config.title} | Mars Gotta</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles["section-about"]}>
         <article className={styles["presentation"]}>

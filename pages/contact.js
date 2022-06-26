@@ -107,7 +107,6 @@ export default function Contact(props) {
     <>
       <Head>
         <title>{ i18n.headTitle } | Mars Gotta</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles["form-info"]}>
         <form role="form" className={styles["form-box"]} onSubmit={handlePress}>

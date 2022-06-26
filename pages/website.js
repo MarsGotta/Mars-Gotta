@@ -28,7 +28,6 @@ export default function Website(props) {
     <section className={styles["container"]}>
       <Head>
         <title>{ i18n.headTitle } | Mars Gotta</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <p className={styles["website-text"]}>
       { i18n.description }

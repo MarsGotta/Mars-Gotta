@@ -32,7 +32,6 @@ export default function CoursesTalk(props) {
     <>
       <Head>
         <title>{ config.title } | Mars Gotta</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles['container']}>
         <h2 className={styles["principal-title"]}>{ i18n.titleTalk }</h2>
@@ -48,7 +47,7 @@ export default function CoursesTalk(props) {
             <p className={styles["talk-description"]}>
               { i18n.talks[0].description[0] }
               <a href="https://github.com/MarsGotta/devcast-series-webcomponent">
-                { i18n.talks[0].description[1] }
+                { ' ' + i18n.talks[0].description[1] }
               </a>
             </p>
           </article>

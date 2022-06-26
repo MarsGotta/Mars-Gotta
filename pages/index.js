@@ -33,7 +33,6 @@ export default function Home(props) {
     <div className={styles["container"]}>
         <Head>
           <title>{ i18n.headTitle }</title>
-          <link rel="icon" href="/favicon.ico" />
         </Head>
         <section id="section-1" className={styles["main"]}>
           <div className={styles["main-container"]}>
