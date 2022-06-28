@@ -13,6 +13,7 @@
     "@web-inmars/mars-textfield": "^0.1.0",
     "express": "^4.18.1",
     "next": "^12.1.7-canary.48",
+    "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-content-loader": "^6.0.3",
     "react-dom": "^18.1.0",
