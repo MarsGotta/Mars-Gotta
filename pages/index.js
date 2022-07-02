@@ -18,6 +18,7 @@ export default function Home(props) {
   const { variableState } = useThemeContext();
   const { locale } = props;
   const i18n = locales[locale];
+  const title = i18n.headTitle;
   
   const onScroll = (e) => {
     if (e.deltaY > 0) {
@@ -32,7 +33,7 @@ export default function Home(props) {
     //<a href="#section-2">section2</a>
     <div className={styles["container"]}>
         <Head>
-          <title>{ i18n.headTitle }</title>
+          <title>{ title }</title>
         </Head>
         <section id="section-1" className={styles["main"]}>
           <div className={styles["main-container"]}>

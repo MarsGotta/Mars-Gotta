@@ -7,7 +7,7 @@ import Layout from "./../layout/Layout";
 import "../styles/globals.css";
 
 function calculateVh() {
-  var vh = window.innerHeight * 0.01;
+  const vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `calc(${vh}px * 100)`);
 }
 
