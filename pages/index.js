@@ -25,7 +25,7 @@ export default function Home(props) {
         <Head>
           <title>{ title }</title>
         </Head>
-        <section id="section-1" className={styles["main"]}>
+        <section className={styles["main"]}>
           <div className={styles["main-container"]}>
             <h1 className={styles["title"]}>{ i18n.main.title }</h1>
             <h2 className={styles["subtitle"]}>
@@ -37,7 +37,7 @@ export default function Home(props) {
             </h2>
           </div>
         </section>
-        <section id="section-2" className={styles["sobre-mi"]}>
+        <section className={styles["sobre-mi"]}>
           <figure className={styles["image"]}>
             <Image src={AboutImage} alt="Avatar" />
           </figure>
@@ -57,7 +57,7 @@ export default function Home(props) {
             </MarsButton>
           </div>
         </section>
-        <section id="section-3" className={styles["mi-trabajo"]}>
+        <section className={styles["mi-trabajo"]}>
           <h2 className={styles["second-title"]}>
             { i18n.myWork.secondTitle }
           </h2>
@@ -74,7 +74,7 @@ export default function Home(props) {
             </MarsButton>
           </div>
         </section>
-        <section id="section-4" className={styles["contacto"]}>
+        <section className={styles["contacto"]}>
           <h2 className={styles["second-title"]}>
             { i18n.contact.secondTitle }
           </h2>

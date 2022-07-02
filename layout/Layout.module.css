@@ -23,7 +23,7 @@
 }
 
 .layout-container.landing {
-    grid-template: 'header' 67px 'subheader' auto 'content' 1fr 'footer' auto;
+    grid-template: 'header' 67px 'content' 1fr 'footer' auto;
     overflow: hidden;
     height: 100%;
 }
@@ -34,10 +34,6 @@
 
 .layout-container header {
     grid-area: header;
-}
-
-.layout-container > section {
-    grid-area: notification;
 }
 
 .subheader {
