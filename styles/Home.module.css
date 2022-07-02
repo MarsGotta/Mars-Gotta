@@ -3,6 +3,7 @@
   overflow: overlay;
   scroll-behavior: smooth;
   height: var(--vh, 100vh);
+  scroll-snap-type: y mandatory;
 }
 
 .container::-webkit-scrollbar-thumb {
@@ -22,6 +23,8 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .main-container {

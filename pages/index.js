@@ -19,18 +19,8 @@ export default function Home(props) {
   const { locale } = props;
   const i18n = locales[locale];
   const title = i18n.headTitle;
-  
-  const onScroll = (e) => {
-    if (e.deltaY > 0) {
-      console.log("scrolling down");
-  } else if (e.deltaY < 0) {
-      console.log("scrolling up");
-  }
-	}
 
   return (
-    //<div className={styles["container"]} onWheel={onScroll} onTouchMove={(touchMoveEvent) => console.log(touchMoveEvent)}>
-    //<a href="#section-2">section2</a>
     <div className={styles["container"]}>
         <Head>
           <title>{ title }</title>
