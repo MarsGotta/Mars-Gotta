@@ -2,7 +2,7 @@
   width: 100%;
   overflow: overlay;
   scroll-behavior: smooth;
-  height: calc(var(--vh) * 100);
+  height: var(--vh, 100vh);
 }
 
 .container::-webkit-scrollbar-thumb {

@@ -8,7 +8,7 @@ import "../styles/globals.css";
 
 function calculateVh() {
   var vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', vh + 'px');
+  document.documentElement.style.setProperty('--vh', `calc(${vh}px * 100)`);
 }
 
 function MarsApp({ Component, pageProps }) {
@@ -28,7 +28,7 @@ function MarsApp({ Component, pageProps }) {
 
     // Re-calculate on device orientation change
     window.addEventListener('orientationchange', calculateVh);
-    
+
     setLoading(false);
     
     const handleStart = (url) => {
