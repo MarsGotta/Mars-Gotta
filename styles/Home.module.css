@@ -157,4 +157,8 @@
   .title {
     width: 100%;
   }
+
+  .container section {
+    min-height: 100%;
+  }
 }
