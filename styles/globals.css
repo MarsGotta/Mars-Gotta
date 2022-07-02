@@ -6,7 +6,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   background-color: var(--color-background, #1f1331);
-  height: 100%;
   --color-text-primary: #170E25;
   --color-bg-secondary: #1f1331;
   --color-bg-home-first: #1f1331;
@@ -74,6 +73,17 @@ html.dark-theme, html.dark-theme body {
   --color-bg-secondary: #1f1331;
   --color-text-primary: #ccd1d7;
   --color-divider-primary: #0c0712;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+}
+
+html {
+  height: -webkit-fill-available;
+  height: -moz-available;
 }
 
 #loading {

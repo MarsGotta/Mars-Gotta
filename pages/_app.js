@@ -6,6 +6,11 @@ import React, { useEffect, useState } from "react";
 import Layout from "./../layout/Layout";
 import "../styles/globals.css";
 
+function calculateVh() {
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', vh + 'px');
+}
+
 function MarsApp({ Component, pageProps }) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
@@ -16,6 +21,14 @@ function MarsApp({ Component, pageProps }) {
   };
 
   useEffect(() => {
+    calculateVh();
+
+    // Re-calculate on resize
+    window.addEventListener('resize', calculateVh);
+
+    // Re-calculate on device orientation change
+    window.addEventListener('orientationchange', calculateVh);
+    
     setLoading(false);
     
     const handleStart = (url) => {

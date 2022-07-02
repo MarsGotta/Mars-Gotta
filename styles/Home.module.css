@@ -2,7 +2,7 @@
   width: 100%;
   overflow: overlay;
   scroll-behavior: smooth;
-  height: 100vh;
+  height: calc(var(--vh) * 100);
 }
 
 .container::-webkit-scrollbar-thumb {
@@ -11,9 +11,8 @@
   border-radius: 10px;
 }
 
-
 .container section {
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   padding: 0 1.2rem;
   flex: 1;
@@ -23,10 +22,6 @@
   align-items: center;
   position: relative;
   z-index: 1;
-}
-
-.container section.main {
-  min-height: calc(100vh - 67px);
 }
 
 .main-container {
@@ -159,9 +154,5 @@
 
   .title {
     width: 100%;
-  }
-  
-  .container section.main {
-    min-height: calc(100vh - 60px);
   }
 }
