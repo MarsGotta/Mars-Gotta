@@ -46,9 +46,9 @@ export default function CoursesTalk(props) {
             </span>
             {renderVideo('https://www.youtube.com/embed/6J483DMLGT4')}
             <p className={styles["talk-description"]}>
-              { i18n.talks[0].description[0] }
+              { i18n.talks[0].description[0] + ' ' }
               <a href="https://github.com/MarsGotta/devcast-series-webcomponent">
-                { ' ' + i18n.talks[0].description[1] }
+                { i18n.talks[0].description[1] }
               </a>
             </p>
           </article>
