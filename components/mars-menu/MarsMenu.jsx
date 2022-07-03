@@ -25,7 +25,7 @@ const MarsMenu = ({
   }
 
   const onTouchEnd = (e) => {
-    const touchCurrent = e?.changedTouches[0]?.clientY;
+    const touchCurrent = e?.changedTouches[0]?.clientY + 20;
     if(touchPrevious > touchCurrent) {
       onClick && onClick({
         detail: isExpanded
@@ -34,11 +34,11 @@ const MarsMenu = ({
   }
 
   return (
-      <nav onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} onClick={handleClick} className={`${styles['collapsed']} ${isExpanded ? styles['is-expanded'] : undefined}`}>
+      <nav onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} className={`${styles['collapsed']} ${isExpanded ? styles['is-expanded'] : undefined}`}>
         <ul className={styles['list']}>
           <MarsStars limit={10} className={styles['stars']} />
           {items.map(({ href, title }, key) => (
-            <li className={styles['item']} key={key}>
+            <li className={styles['item']} key={key} onClick={handleClick}>
               <Link href={href}>{title}</Link>
             </li>
           ))}
