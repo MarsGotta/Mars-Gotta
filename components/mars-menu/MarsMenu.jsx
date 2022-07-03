@@ -11,6 +11,7 @@ const MarsMenu = ({
   isExpanded,
   onClick,
 }) => {
+  let touchPrevious = 0;
 
   const handleClick = (e) => {
     e.preventDefault()
@@ -19,8 +20,21 @@ const MarsMenu = ({
     })
   }
 
+  const onTouchStart = (e) => {
+    touchPrevious = e?.touches[0]?.clientY;
+  }
+
+  const onTouchEnd = (e) => {
+    const touchCurrent = e?.changedTouches[0]?.clientY;
+    if(touchPrevious > touchCurrent) {
+      onClick && onClick({
+        detail: isExpanded
+      })
+    }
+  }
+
   return (
-      <nav onClick={handleClick} className={`${styles['collapsed']} ${isExpanded ? styles['is-expanded'] : undefined}`}>
+      <nav onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} onClick={handleClick} className={`${styles['collapsed']} ${isExpanded ? styles['is-expanded'] : undefined}`}>
         <ul className={styles['list']}>
           <MarsStars limit={10} className={styles['stars']} />
           {items.map(({ href, title }, key) => (

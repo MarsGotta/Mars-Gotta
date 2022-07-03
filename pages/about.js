@@ -15,7 +15,8 @@ import AboutMe from '../public/about-me.svg'
 export default function About(props) {
   const { locale } = props;
   const i18n = locales[locale];
-  const config = { title: i18n.headTitle };
+  const title = i18n.headTitle;
+  const config = { title };
   const { configState, setConfigState } = useConfigContext();
 
   const [ moreText, setMoreText ] = useState({presentation: false, skills: false});
@@ -53,7 +54,7 @@ export default function About(props) {
   return (
     <>
       <Head>
-        <title>{config.title} | Mars Gotta</title>
+        <title>{title} | Mars Gotta</title>
       </Head>
       <section className={styles["section-about"]}>
         <article className={styles["presentation"]}>

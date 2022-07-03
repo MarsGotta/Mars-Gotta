@@ -9,7 +9,8 @@ import { useConfigContext } from "../core/config-context";
 export default function CoursesTalk(props) {
   const { locale } = props;
   const i18n = locales[locale];
-  const config = { title: i18n.headTitle };
+  const title = i18n.headTitle;
+  const config = { title };
   const { configState, setConfigState } = useConfigContext();
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function CoursesTalk(props) {
   return (
     <>
       <Head>
-        <title>{ config.title } | Mars Gotta</title>
+        <title>{ title } | Mars Gotta</title>
       </Head>
       <section className={styles['container']}>
         <h2 className={styles["principal-title"]}>{ i18n.titleTalk }</h2>

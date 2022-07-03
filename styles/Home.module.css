@@ -133,7 +133,7 @@
 
 .image {
   width: 150px;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
 .mi-trabajo h2 {
@@ -156,9 +156,5 @@
 
   .title {
     width: 100%;
-  }
-
-  .container section {
-    min-height: 100%;
   }
 }

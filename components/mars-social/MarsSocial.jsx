@@ -22,7 +22,7 @@ const MarsSocial = ({
     }, 
     {
       name: 'twitter',
-      link: 'https://twitter.com/marcelagotta',
+      link: 'https://twitter.com/imarsgotta',
       variant: 'secondary',
       type: 'brands'
     }, 

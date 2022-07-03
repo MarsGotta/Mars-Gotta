@@ -15,7 +15,8 @@ import ContactImage from '../public/astronauta-contact.png'
 export default function Contact(props) {
   const { locale } = props;
   const i18n = locales[locale];
-  const config = { title: i18n.headTitle }
+  const title = i18n.headTitle;
+  const config = { title }
   const { configState, setConfigState } = useConfigContext();
 
   useEffect(() => {
@@ -106,7 +107,7 @@ export default function Contact(props) {
   return (
     <>
       <Head>
-        <title>{ i18n.headTitle } | Mars Gotta</title>
+        <title>{ title } | Mars Gotta</title>
       </Head>
       <section className={styles["form-info"]}>
         <form role="form" className={styles["form-box"]} onSubmit={handlePress}>

@@ -1,7 +1,7 @@
 .main {
     color: var(--color-text-primary);
     margin: auto;
-    grid-area: content;
+    grid-area: main;
     width: 100%;
     height: 100%;
     display: flex;
@@ -15,15 +15,15 @@
 
 .layout-container {
     display: grid;
-    grid-template: 'header' 67px 'subheader' auto 'content' 1fr 'footer' 104px;
+    grid-template: 'header' 67px 'subheader' auto 'main' 1fr 'footer' 104px / 1fr;
     height: 100%;
     position: relative;
-    overflow-y: auto;
+    overflow: overlay;
     scroll-behavior: smooth;
 }
 
 .layout-container.landing {
-    grid-template: 'header' 67px 'content' 1fr 'footer' auto;
+    grid-template: 'header' 67px 'main' 1fr 'footer' 60px / 1fr;
     overflow: hidden;
     height: 100%;
 }
@@ -43,10 +43,4 @@
 .hide {
     display: none;
 }
-
-@media (max-width: 600px) {
-    .layout-container.landing {
-        grid-template: 'header' auto 'subheader' auto 'content' 1fr 'footer' auto;
-    }
-  }
   

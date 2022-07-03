@@ -7,17 +7,14 @@ const MarsIcon = ({
   name,
   size,
   isDisabled, 
-  addTitle, 
   onClick: passedCb, 
   href,
   className,
-  type,
-  variant,
   slot
 }) => {
   const onClick = () => {
     if (isDisabled) return;
-    if(href) window?.open(href, '_ blank')
+    if(href) window?.open(href, '_blank')
 
     passedCb();
   };

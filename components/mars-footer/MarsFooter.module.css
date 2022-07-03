@@ -6,7 +6,7 @@
   align-items: center;
   color: var(--color-text-primary);
   font-weight: 300;
-  padding-bottom: 20px;
+  padding: 10px 0;
   z-index: 2;
 }
 
@@ -19,8 +19,9 @@
   margin-left: 0.5rem;
 }
 
-.footer a {
+.footer p {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }

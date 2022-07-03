@@ -8,13 +8,9 @@ const MarsFooter = ({
   return (
     <footer className={`${styles.footer} ${fixed ? styles.fixed : ''}`}>
       <MarsSocial />
-      <a
-        href="https://marsgotta.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <p>
         Hecho con amor <span style={{margin: '0 10px'}}>&#128156;</span> por Mars Gotta
-      </a>
+      </p>
     </footer>
   );
 };

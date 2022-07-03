@@ -33,6 +33,7 @@ const MarsHeader = ({
 
   function handleSwitch({ detail: {event: {target}} }) {
     setSwitchChecked(target.checked);
+    handleClick();
     changeSwitch && changeSwitch(target.checked);
   }
 
@@ -45,7 +46,7 @@ const MarsHeader = ({
   return (
     <header className={`${styles['header']} ${isExpanded ? styles['full-width'] : ''}`}>
       <div className={styles['header-content']}>
-        <MarsLogo className={styles['logo']} />
+        <MarsLogo isExpanded={isExpanded} onClick={handleClick} className={styles['logo']} />
         <span className={styles['right-box']}>
           <mars-switch id="switchMode" class={styles['switch']} variant="xs,outline" ref={MarsSwitchRef}>
             <MarsIcon className={styles['icon-switch']} name={isFirst ? 'moon' : selectIconName()} type="solid" slot="slider" size="17" />

@@ -10,7 +10,8 @@ import locales from "../locales/website.i18n.js";
 export default function Website(props) {
   const { locale } = props;
   const i18n = locales[locale];
-  const config = { title: i18n.headTitle }
+  const title = i18n.headTitle;
+  const config = { title }
   const svgList = ["html", "css", "javascript", "react", "next", "node"];
   const { variableState } = useThemeContext();
   const [ theme, setTheme ] = useState('dark-theme')
@@ -27,7 +28,7 @@ export default function Website(props) {
   return (
     <section className={styles["container"]}>
       <Head>
-        <title>{ i18n.headTitle } | Mars Gotta</title>
+        <title>{ title } | Mars Gotta</title>
       </Head>
       <p className={styles["website-text"]}>
       { i18n.description }
