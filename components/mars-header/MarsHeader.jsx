@@ -8,7 +8,8 @@ import MarsIcon from '../mars-icon/MarsIcon.jsx'
 const MarsHeader = ({
   changeSwitch,
   theme,
-  items
+  items,
+  route,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isFirst, setIsFirst] = useState(true);
@@ -53,7 +54,7 @@ const MarsHeader = ({
           </mars-switch>
           <MarsIcon className={styles['icon']} name="bars" type="solid" onClick={handleToggle} />
         </span>
-        <MarsMenu items={items} isExpanded={isExpanded} onClick={handleClick} />
+        <MarsMenu items={items} isExpanded={isExpanded} onClick={handleClick} route={route} />
       </div>
     </header>
   );

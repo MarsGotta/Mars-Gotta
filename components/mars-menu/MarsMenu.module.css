@@ -40,7 +40,7 @@
   padding-left: 20px;
 }
 
-.item:hover {
+.item:hover, .active {
   color: #e7531e;
 }
 

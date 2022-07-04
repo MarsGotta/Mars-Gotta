@@ -18,15 +18,13 @@ function MarsApp({ Component, pageProps }) {
   const props = {
     ...pageProps,
     locale: router.locale,
+    route: router.route,
   };
 
   useEffect(() => {
     calculateVh();
 
-    // Re-calculate on resize
     window.addEventListener('resize', calculateVh);
-
-    // Re-calculate on device orientation change
     window.addEventListener('orientationchange', calculateVh);
 
     setLoading(false);
@@ -64,7 +62,7 @@ function MarsApp({ Component, pageProps }) {
               <span className="loader"></span>
             </div>
           )}
-          <Layout landing={router.pathname === '/'} hide={loading} locale={router.locale}>
+          <Layout landing={router.pathname === '/'} hide={loading} locale={router.locale} route={router.route}>
             <Component {...props} />
           </Layout>
         </ConfigContextProvider>

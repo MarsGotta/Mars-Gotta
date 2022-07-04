@@ -10,6 +10,7 @@ const MarsMenu = ({
   items,
   isExpanded,
   onClick,
+  route,
 }) => {
   let touchPrevious = 0;
 
@@ -38,7 +39,7 @@ const MarsMenu = ({
         <ul className={styles['list']}>
           <MarsStars limit={10} className={styles['stars']} />
           {items.map(({ href, title }, key) => (
-            <li className={styles['item']} key={key} onClick={handleClick}>
+            <li className={`${styles['item']} ${route === href ? styles['active'] : ''}`} key={key} onClick={handleClick}>
               <Link href={href}>{title}</Link>
             </li>
           ))}

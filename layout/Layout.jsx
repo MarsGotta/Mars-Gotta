@@ -15,6 +15,7 @@ const Layout = ({
 	hide,
 	landing,
 	locale,
+	route
 }) => {
 	const i18n = locales[locale];
 	const { variableState, setVariableState } = useThemeContext();
@@ -39,7 +40,7 @@ const Layout = ({
 
   	return (
 		<div className={`${styles['layout-container']} ${landing ? styles['landing'] : ''} ${hide ? styles['hide'] : ''}`}>
-			<MarsHeader items={ i18n.menuItems } changeSwitch={e => changeTheme(e)} theme={theme} />
+			<MarsHeader items={ i18n.menuItems } changeSwitch={e => changeTheme(e)} theme={theme} route={route} />
 			<MarsNotification>
 				<p>{ i18n.notificationDescription[0] }</p>
 				<p>{ i18n.notificationDescription[1] }</p>
