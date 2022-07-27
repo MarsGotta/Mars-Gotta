@@ -18,7 +18,7 @@ const MarsHeader = ({
   const MarsSwitchRef = useRef(null);
 
   useEffect(() => {
-    import("@web-inmars/mars-switch/dist/mars-switch.js");
+    import("@web-inmars/mars-switch/mars-switch.js");
   }, []);
 
   useEffect(() => {

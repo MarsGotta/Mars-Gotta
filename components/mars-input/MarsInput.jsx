@@ -14,7 +14,7 @@ const MarsInput = ({
   className
 }) => {
   useEffect(() => {
-    import("@web-inmars/mars-textfield/dist/mars-textfield.js");
+    import("@web-inmars/mars-textfield/mars-textfield.js");
   }, []);
 
   const handleChange = (e) => {

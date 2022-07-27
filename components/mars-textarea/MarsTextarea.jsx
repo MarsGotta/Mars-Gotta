@@ -14,7 +14,7 @@ const MarsTextarea = ({
   className
 }) => {
   useEffect(() => {
-    import("@web-inmars/mars-textarea/dist/mars-textarea");
+    import("@web-inmars/mars-textarea/mars-textarea.js");
   }, []);
 
   const handleChange = (e) => {
@@ -39,7 +39,6 @@ const MarsTextarea = ({
       disabled={disabled} 
       placeholder={placeholder} 
       value={value} 
-      disabled={disabled}
       onInput={handleChange}
       label={placeholder}
       onKeyDown={onKeyDown}

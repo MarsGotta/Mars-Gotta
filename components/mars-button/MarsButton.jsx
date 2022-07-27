@@ -13,7 +13,7 @@ const MarsButton = ({
   const router = useRouter();
 
   useEffect(() => {
-    import("@web-inmars/mars-button/dist/mars-button.js");
+    import("@web-inmars/mars-button/mars-button.js");
   }, []);
 
   const onClickHandler = (e) => {
